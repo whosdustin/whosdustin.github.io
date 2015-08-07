@@ -1,0 +1,43 @@
+// Copyright 2015 Whosdustin
+//
+// Header Layout
+//
+.l-header {
+  min-height: 3.75em;
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+.l-header-title {
+  font-size: 26px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+	svg{
+		width: 100px;
+    margin: 1rem 0 0 1rem;
+	}
+  &:visited {
+    color: darken($grey, 25%);
+  }
+}
+.l-header-nav {
+  float: right;
+  line-height: 56px;
+
+    .page-link {
+        color: $font-color;
+        line-height: $line-height-base;
+        padding: 15px;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: gutter();
+        }
+    }
+
+    .current {
+      background:$brand-primary-color;
+      color:#fff;
+    }
+}

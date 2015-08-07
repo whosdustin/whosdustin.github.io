@@ -1,0 +1,245 @@
+// Copyright 2015 Whosdustin.com
+//
+// Mixins
+// A collection of useful SASS mixins library.
+
+// Breakpoints // ------------------------------------
+
+// @access public
+// @param {String} $point - Breakpoint media
+// @example scss - Usage
+//   .foo {
+//     @include media(tablet){
+//       width:100%;
+//     }
+@mixin media($point) {
+  @if $point == desktop {
+    @media (min-width: $bp-larger) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: $bp-large) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: $bp-medium) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: $bp-small)  { @content ; }
+  }
+  @else if $point == handheld {
+    @media (max-width: $bp-smaller)  { @content ; }
+  }
+}
+
+// Vendor Prefixes Helper // ------------------------------------
+
+// @access private
+// @param {String} $property - Unprefixed CSS property
+// @param {*} $value - Raw CSS value
+// @param {List} $prefixes - List of prefixes to output
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+// Pixel to Em Converter // ------------------------------------
+
+// @access public
+// @param {Number} $pixels - Pixel to convert
+// @param {Number} $context - Base number
+@function em($pixels, $context: $body-base) {
+  @return #{$pixels/$context}em;
+}
+
+// Transform // ------------------------------------
+
+// @access public
+// @param {String} $transformation - The transform to apply
+// @example scss - Usage
+//  .foo {
+//    @include transform(translateX(10px));
+//    }
+// @example css - Result
+//   .foo {
+//     -webkit-transform: translateX(10px);
+//     -ms-transform: translateX(10px);
+//     transform: translateX(10px);
+//   }
+@mixin transform($transformation) {
+  @include prefix(transform, $transformation, 'webkit' 'ms');
+}
+
+// Transition // ------------------------------------
+
+// @access public
+// @param {Time} $time [1s] - Duration
+// @param {String} $timing-function [ease-in-out] - Timing function or cubic bezier curve
+// @example scss - Usage
+//   .foo {
+//     @include transition(0.3s, ease-in);
+//   }
+// @example css - Result
+//   .foo {
+//     -webkit-transition: all 0.3s ease-in;
+//     transition: all 0.3s ease-in;
+//   }
+@mixin transition($time: 1s, $timing-function: ease-in-out) {
+  @include prefix(transition, all $time $timing-function, 'webkit');
+}
+
+// Background gradient // ------------------------------------
+
+// @access public
+// @param {Color} $start-color - Start color
+// @param {Color} $end-color - End color
+// @param {String} $orientation - Type of gradient, either `vertical`, `horizontal` or `radial`
+// @example scss - Usage
+//   .foo {
+//     @include background-gradient(red, black, 'vertical');
+//   }
+// @example css - Result
+//   .foo {
+//     background: -webkit-linear-gradient(top, red, black);
+//     background: linear-gradient(to bottom, red, black);
+//   }
+@mixin background-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  }
+  @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  }
+  @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+// Image Pulling // ---------------------------------------
+
+@mixin img-pull($direction) {
+  margin: gutter();
+  margin-top: 0;
+  margin-#{$direction}: -50px;
+  float: #{$direction};
+  width: 50%;
+}
+
+// Box Sizing Helper // ------------------------------------
+
+// @access public
+// @param {String} $type - Either `border-box`, `padding-box` or `content-box`
+// @example scss - Usage
+//   .foo {
+//     @include box-sizing(border-box);
+//   }
+// @example css - Result
+//   .foo {
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+@mixin box-sizing($type) {
+  @include prefix(box-sizing, $type, 'moz');
+}
+
+// Centers Elements // ------------------------------------
+
+// @access public
+// @example scss - Usage
+//   .foo {
+//     @include center-block;
+//   }
+// @example css - Result
+//   .foo {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Hardware Acceleration // ------------------------------------
+
+// Forces browsers to use hardware acceleration for transforms
+// @access public
+// @example scss - Usage
+//   .foo {
+//     @include ha;
+//   }
+// @example css - Result
+//   .foo {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     -moz-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+@mixin ha {
+  @include prefix(transform, translate3d(0, 0, 0), 'webkit' 'ms');
+}
+
+// Opacity // ------------------------------------
+
+// @access public
+// @param {Float} $opacity - Opacity
+// @example scss - Usage
+//   .foo {
+//     @include opacity(0.5);
+//   }
+// @example css - Result
+//   .foo {
+//     opacity: 0.5;
+//     filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#50)";
+//   }
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+}
+
+// Placeholder Text // ------------------------------------
+// @access public
+// @param {Color} $color - color variable
+// @example scss - Usage
+//  input {
+//      @include placeholder();
+//  }
+// @example css - Result
+//  input{
+//    &:-moz-placeholder            { color: $input-color-placeholder; }
+//    &::-moz-placeholder           { color: $input-color-placeholder; }
+//    &:-ms-input-placeholder       { color: $input-color-placeholder; }
+//    &::-webkit-input-placeholder  { color: $input-color-placeholder; }
+//  }
+@mixin placeholder($color: $input-color-placeholder) {
+  &:-moz-placeholder { color: $color; } // Firefox 4-18
+  &::-moz-placeholder { color: $color; } // Firefox 19+
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder { color: $color; } // Safari and Chrome
+}
+
+// Clearfix // ------------------------------------
+// @access public
+// @example scss - Usage
+//   .foo {
+//     @extend %clearfix;
+//   }
+%clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+
+  &:after {
+    clear: both;
+  }
+}

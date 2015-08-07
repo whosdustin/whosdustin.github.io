@@ -3,11 +3,23 @@
 # 2. config.build.yml
 # 3. config.yml
 
+title: Who's Dustin
 name: whosdustin.com
-description: Blog for Dustin Delatore
+description: > #
+              Hybrid Ui designer and Front-end developer with an extensive
+              knowledge in user experience. Seven years design experience and
+              once nominated for a CSS Design Award. Actively working as a mobile
+              developer for Bisk Education using Appcelerator's Titanium Alloy.
 author:
   name: Dustin Delatore
   email: dustin@delatore.me
+twitter_username: whos_dustin
+github_username:  whosdustin
+dribbble_username: whosdustin
+
+navigation:
+ - title: About
+   url: /about
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -18,6 +30,9 @@ include: ['.htaccess']
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
 show_drafts: true
+
+# Additional Settings
+permalink: none
 
 # Markdown library
 markdown: kramdown
@@ -34,4 +49,4 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-pygments: true
+highlighter: rouge

@@ -1,0 +1,12 @@
+<a class="l-header-title" href="{{ site.baseurl }}/">
+  {% include lgo-whosdustin.svg %}
+</a>
+<nav class="l-header-nav">
+  {% for link in site.navigation %}
+  {% assign current = nil %}
+  {% if page.url contains link.url %}
+    {% assign current = 'current' %}
+  {% endif %}
+    <a href="{{ link.url }}"  class="{% if current %} {{ current }} {% endif %} page-link">{{ link.title }}</a>
+  {% endfor %}
+</nav>

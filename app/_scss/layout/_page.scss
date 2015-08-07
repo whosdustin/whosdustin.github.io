@@ -1,0 +1,13 @@
+// Copyright 2015 Whosdustin.com
+//
+// Page Layout
+//
+
+.l-page-header {
+  @include container(60%);
+  margin-bottom: gutter();
+}
+.l-page-article {
+  @include container(55%);
+  margin-bottom: gutter();
+}

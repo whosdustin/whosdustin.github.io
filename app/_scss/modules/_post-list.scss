@@ -1,0 +1,20 @@
+// Copyright 2015 Whosdustin.com
+//
+// Post List
+// Module styles a list of posts for the blog
+// Created for the ability to update home page freely
+
+.m-post-list {
+  margin-left: 0;
+  list-style: none;
+  text-align: left;
+  > li {
+    margin-bottom: gutter();
+  }
+  h2 {
+    margin-bottom:0;
+  }
+}
+.m-post-meta {
+    color: $grey;
+}

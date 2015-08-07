@@ -1,0 +1,23 @@
+// Copyright 2015 Whosdustin.com
+//
+// Main Container Layouts
+//
+
+// Sites Container
+main {
+  @include container(68em);
+}
+.home {
+  @include container(60%);
+}
+
+// Grid
+.l-row {
+  @include container();
+}
+.l-half {
+  @include span(6);
+}
+.l-last {
+  @include last;
+}

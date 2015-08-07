@@ -1,0 +1,15 @@
+// Copyright 2015 Whosdustin.com
+//
+// Brand Theming
+//
+
+// Brand border
+body {
+  border-top:solid 4px $brand-primary-color;
+}
+
+// Logo // --------------------------
+
+// SVG classes
+.st0{fill:$brand-primary-color;}
+.st1{fill:darken($brand-primary-color, 15%)}
