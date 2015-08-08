@@ -7,4 +7,16 @@ permalink: /about/
 {{ site.description }}
 
 <h2>Contact</h2>
-If you have any questions, comments, or would just like to say hello, feel free to send me an email <a href="mailto:dustin@delatore.me">dustin@delatore.me</a>.
+<p>
+  If you have any questions, comments, or would just like to say hello, feel free to send me an email <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+</p>
+
+{% if site.author.available %}
+  <div class="m-alert m-alert-success">
+    Available for work
+  </div>
+{% else %}
+  <div class="m-alert m-alert-error">
+    Not available for work
+  </div>
+{% endif %}
