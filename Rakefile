@@ -1,7 +1,7 @@
 require 'fileutils'
 require 'colorize'
 
-task :default => :server
+# task :default => :draft:new
 
 @time = Time.now.utc
 @draft_dir = 'app/_drafts'
@@ -29,6 +29,19 @@ namespace :draft do
     end
     puts "Opening: #{@slug}"
     system("open -a 'ia\ writer' #{@draft_dir}/#{@slug}.md")
+  end
+
+  desc "Open from the draft list"
+  task :open do
+    puts "List of drafts:\n".colorize(:lightblue)
+    Dir.foreach("#{@draft_dir}") do |fname|
+    next if fname == '.' or fname == '..' or fname == '.keep'
+      puts fname.colorize(:blue)
+    end
+    puts "\nWhat draft would you like to open?".colorize(:magenta)
+    @post_name = STDIN.gets.chomp
+    puts "Opening #{@post_name}"
+    system("open -a 'ia\ writer' #{@draft_dir}/#{@post_name}")
   end
 
   desc "Copy draft to production post!"

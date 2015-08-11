@@ -1,0 +1,21 @@
+// Copyright 2015 Whosdustin.com
+//
+// Alerts
+//
+
+.m-alert {
+  @extend %vertical-rhythm;
+  padding: gutter();
+  border: solid 1px transparent;
+  border-radius: 4px;
+}
+.m-alert-success {
+  background: lighten($success-color, 40%);
+  border-color: $success-color;
+  color: darken($success-color, 10%);
+}
+.m-alert-error {
+  background: lighten($error-color, 40%);
+  border-color: $error-color;
+  color: darken($error-color, 10%);
+}
