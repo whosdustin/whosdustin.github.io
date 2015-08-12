@@ -9,6 +9,9 @@
   font-size: $font-size-base * 0.65;
   color: $grey;
   .l-row {
-    @include container(60%);
+    @include container(90%);
+    @include media(tablet) {
+      @include container(60%);
+    }
   }
 }

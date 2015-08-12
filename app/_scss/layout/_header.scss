@@ -4,28 +4,50 @@
 //
 .l-header {
   width: 100%;
-  height: 8.6rem;
+  height: 5rem;
   position: fixed;
   top: 0;
   border-bottom: solid 1px $layout-border-color;
   background: $white;
   z-index: $z-header;
+  @include media(phablet) {
+    height: 8.6rem;
+  }
 }
 .l-header-title {
   display: block;
-  float: left;
+  height: 5.1rem;
+  text-align: center;
+  @include media(phablet) {
+    float: left;
+  }
 	svg{
-		width: 100px;
-    margin: 1rem 0 0 1rem;
+    width: 90px;
+    margin: 0.5rem auto;
+    @include media(phablet) {
+      width: 100px;
+      margin: 1rem 0 0 1rem;
+    }
+    g {
+      display: none;
+      @include media(phablet) {
+        display: block;
+      }
+    }
 	}
   &:hover {
     border: none;
   }
 }
 .l-header-nav {
-  float: right;
+  display: block;
   overflow: hidden;
-  margin-right: gutter();
+  border-bottom: solid 1px $layout-border-color;
+  background: $white;
+  @include media(phablet) {
+    float: right;
+    margin-right: gutter();
+  }
   .page-link {
     display: block;
     float: left;
@@ -33,7 +55,10 @@
     font-family: $font-family-secondary;
     font-size: $font-size-small;
     color: lighten($font-color, 30%);
-    line-height: 8.6rem;
+    line-height: 5rem;
+    @include media(phablet) {
+      line-height: 8.4rem;
+    }
     &:hover {
       color: $font-color;
       border-bottom: solid 2px $brand-primary-color;

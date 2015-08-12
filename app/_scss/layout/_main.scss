@@ -9,7 +9,10 @@ main {
   padding-top: 8.6rem;
 }
 .home {
-  @include container(60%);
+  @include container(90%);
+  @include media(phablet) {
+    @include container(60%);
+  }
 }
 
 // Grid
@@ -17,7 +20,10 @@ main {
   @include container();
 }
 .l-half {
-  @include span(6);
+  @include span(12);
+  @include media(phablet) {
+    @include span(6);
+  }
 }
 .l-last {
   @include last;
