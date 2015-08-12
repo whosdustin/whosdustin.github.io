@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 
 <div class="home">
@@ -8,7 +9,7 @@ layout: default
     {% for post in site.posts %}
       <li>
         <h2>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" data-event="Visited '{{ post.title }}' from '{{ page.title }}' page">{{ post.title }}</a>
         </h2>
 
         <span class="m-post-meta">

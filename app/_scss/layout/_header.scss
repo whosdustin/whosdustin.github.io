@@ -3,22 +3,23 @@
 // Header Layout
 //
 .l-header {
-  min-height: 3.75em;
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  width: 100%;
+  height: 8.6rem;
+  position: fixed;
+  top: 0;
+  border-bottom: solid 1px $layout-border-color;
+  background: $white;
+  z-index: $z-header;
 }
 .l-header-title {
-  font-size: 26px;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
+  display: block;
   float: left;
 	svg{
 		width: 100px;
     margin: 1rem 0 0 1rem;
 	}
-  &:visited {
-    color: darken($grey, 25%);
+  &:hover {
+    border: none;
   }
 }
 .l-header-nav {
@@ -28,12 +29,18 @@
   .page-link {
     display: block;
     float: left;
-    padding: 1.5rem 2.5rem;
-    color: $font-color;
-    line-height: $line-height-base;
+    padding: 0 2.5rem;
+    font-family: $font-family-secondary;
+    font-size: $font-size-small;
+    color: lighten($font-color, 30%);
+    line-height: 8.6rem;
+    &:hover {
+      color: $font-color;
+      border-bottom: solid 2px $brand-primary-color;
+    }
   }
   .current {
-    background:$brand-primary-color;
-    color: $white;
+    color: $font-color;
+    border-bottom: solid 2px $brand-primary-color;
   }
 }

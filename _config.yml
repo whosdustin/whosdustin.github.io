@@ -19,7 +19,7 @@ dribbble_username: whosdustin
 
 navigation:
  - title: Articles
-   url: /index.html
+   url: /articles
  - title: About
    url: /about
 

@@ -6,6 +6,7 @@
 // Sites Container
 main {
   @include container(68em);
+  padding-top: 8.6rem;
 }
 .home {
   @include container(60%);

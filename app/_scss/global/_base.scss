@@ -27,8 +27,9 @@ a {
     color: darken($brand-primary-color, 15%);
   }
   &:hover {
+    border-bottom: solid 1px $font-color;
     color: $font-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
