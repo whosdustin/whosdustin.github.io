@@ -316,7 +316,7 @@ module.exports = function (grunt) {
     open: {
       dist: {
         path: 'http://whosdustin.github.io',
-        app: 'WhosDustin.com'
+        app: 'Google Chrome'
       }
     },
     coffeelint: {

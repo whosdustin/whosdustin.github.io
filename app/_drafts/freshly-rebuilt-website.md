@@ -9,4 +9,4 @@ I have recently rebuilt my website after several years of an unused stagnant por
 
 For over a year now I have been the lead Front-end developer for a company in Tampa; Bisk Education. While working alongside a small group of talented developers and designers I have found my passion as a front-end developer.
 
-[Link](google.com)
+[Link](http://google.com)

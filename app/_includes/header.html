@@ -1,4 +1,4 @@
-<a class="l-header-title" href="{{ site.baseurl }}/" data-event="Went 'Home' from the logo on '{{ page.title }}' page">
+<a class="l-header-title" href="{{ site.baseurl }}/" data-event="Went 'Home' from the Logo on '{{ page.title }}' page">
   {% include lgo-whosdustin.svg %}
 </a>
 <nav class="l-header-nav">
@@ -7,6 +7,6 @@
   {% if page.url contains link.url %}
     {% assign current = 'current' %}
   {% endif %}
-    <a href="{{ link.url }}"  class="{% if current %} {{ current }} {% endif %} page-link" data-event="Visited '{{ link.title }}' from the header on '{{ page.title }}' page">{{ link.title }}</a>
+    <a href="{{ link.url }}"  class="{% if current %} {{ current }} {% endif %} page-link" data-event="Visited '{{ link.title }}' from the Header on '{{ page.title }}' page">{{ link.title }}</a>
   {% endfor %}
 </nav>
