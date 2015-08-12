@@ -313,6 +313,12 @@ module.exports = function (grunt) {
         }
       }
     },
+    open: {
+      dist: {
+        path: 'http://whosdustin.github.io',
+        app: 'WhosDustin.com'
+      }
+    },
     coffeelint: {
       options: {
         'max_line_length': {
@@ -423,7 +429,8 @@ module.exports = function (grunt) {
     'check',
     'test',
     'build',
-    'buildcontrol'
+    'buildcontrol',
+    'open:dist'
     ]);
 
   grunt.registerTask('default', [
