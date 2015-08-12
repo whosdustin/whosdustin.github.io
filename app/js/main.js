@@ -1,4 +1,5 @@
 ;(function($){
+  'use strict';
   $.fn.NoFollow = function() {
     var $this = $(this);
     var page = window.location.pathname;
