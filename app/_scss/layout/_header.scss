@@ -47,6 +47,7 @@
   @include media(phablet) {
     float: right;
     margin-right: gutter();
+    border-bottom: none;
   }
   .page-link {
     display: block;
