@@ -23,21 +23,17 @@
 }
 .l-header-nav {
   float: right;
-  line-height: 56px;
-
-    .page-link {
-        color: $font-color;
-        line-height: $line-height-base;
-        padding: 15px;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: gutter();
-        }
-    }
-
-    .current {
-      background:$brand-primary-color;
-      color:#fff;
-    }
+  overflow: hidden;
+  margin-right: gutter();
+  .page-link {
+    display: block;
+    float: left;
+    padding: 1.5rem 2.5rem;
+    color: $font-color;
+    line-height: $line-height-base;
+  }
+  .current {
+    background:$brand-primary-color;
+    color: $white;
+  }
 }

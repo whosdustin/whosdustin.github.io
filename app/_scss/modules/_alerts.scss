@@ -8,11 +8,27 @@
   padding: gutter();
   border: solid 1px transparent;
   border-radius: 4px;
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  text-align: center;
 }
 .m-alert-success {
   background: lighten($success-color, 40%);
   border-color: $success-color;
   color: darken($success-color, 10%);
+  a {
+    @extend .m-alert-success;
+    text-decoration: underline;
+  }
+}
+.m-alert-info {
+  background: lighten($info-color, 40%);
+  border-color: $info-color;
+  color: darken($info-color, 10%);
+  a {
+    @extend .m-alert-info;
+    text-decoration: underline;
+  }
 }
 .m-alert-error {
   background: lighten($error-color, 40%);

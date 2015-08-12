@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Freshly rebuilt website
+title: Freshly Rebuilt Website
 publish_date:
-categories: brag
+categories: dev
 ---
 
 I have recently rebuilt my website after several years of an unused stagnant portfolio site. For a long time I have considered myself a hybrid UI designer and front-end developer. Along, with the rebuild of my site I am considering myself a full-time front-end developer with experience in UI design.

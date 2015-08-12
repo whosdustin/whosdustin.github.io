@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Built a website while driving to SXSW
+title: Built A Website While Driving To SXSW
 publish_date:
 categories: dev
 ---

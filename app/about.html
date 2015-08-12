@@ -4,19 +4,19 @@ title: About
 permalink: /about/
 ---
 
+{% if site.author.available %}
+  <div class="m-alert m-alert-success">
+    Available for work. <a href="/cv/" data-event="Viewed Resume from '{{ page.title }}' page">View my resumé</a>.
+  </div>
+{% else %}
+  <div class="m-alert m-alert-info">
+    Not available for work
+  </div>
+{% endif %}
+
 {{ site.description }}
 
 <h2>Contact</h2>
 <p>
-  If you have any questions, comments, or would just like to say hello, feel free to send me an email <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+  If you have any questions, comments, or would just like to say hello, feel free to send me an email <a href="mailto:{{ site.author.email }}" data-event="Composed Email from '{{ page.title }}' page">{{ site.author.email }}</a>.
 </p>
-
-{% if site.author.available %}
-  <div class="m-alert m-alert-success">
-    Available for work
-  </div>
-{% else %}
-  <div class="m-alert m-alert-error">
-    Not available for work
-  </div>
-{% endif %}

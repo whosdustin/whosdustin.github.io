@@ -18,6 +18,8 @@ github_username:  whosdustin
 dribbble_username: whosdustin
 
 navigation:
+ - title: Articles
+   url: /index.html
  - title: About
    url: /about
 
