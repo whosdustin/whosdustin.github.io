@@ -264,6 +264,8 @@ module.exports = function (grunt) {
             //'_bower_components/jquery/jquery.min.js',
             //'favicon.ico',
             //'apple-touch*.png'
+            'README.md',
+            'robots.txt'
           ],
           dest: '<%= yeoman.dist %>'
         },
@@ -275,7 +277,8 @@ module.exports = function (grunt) {
           src: ['*.pdf'],
           dest: '<%= yeoman.dist %>/cv/',
           filter: 'isFile'
-        }]
+        }
+      ]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
       stageCss: {
