@@ -16,4 +16,14 @@ $(document).ready(function(){
   $('[data-event]').on('click', function() {
     _gs('event', $(this).data('event'));
   });
+
+  $('.m-page-link, .m-page-title').each(function() {
+    var wordArray = $(this).text().split(' ');
+    if (wordArray.length > 1) {
+      wordArray[wordArray.length - 2] += '&nbsp;' + wordArray[wordArray.length - 1];
+      wordArray.pop();
+      return $(this).html(wordArray.join(' '));
+    }
+  });
+
 });

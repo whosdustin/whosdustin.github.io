@@ -20,8 +20,15 @@ dribbble_username: whosdustin
 navigation:
  - title: Articles
    url: /articles
+# - title: Projects
+#   url: /projects
  - title: About
    url: /about
+
+collections:
+  projects:
+    output: true
+    permalink: /:path/
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -31,6 +38,7 @@ include: ['.htaccess']
 
 gems:
   - jekyll-sitemap
+  - jekyll-contentblocks
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true

@@ -10,6 +10,7 @@ require 'colorize'
 ## Articles ====================================================================
 
 namespace :draft do
+  # New Drafts
   desc "Creating a new draft for post/entry"
   task :new do
     puts "What's the name for your next post?".colorize(:magenta)
@@ -25,12 +26,13 @@ namespace :draft do
       file.puts "publish_date:"
       file.puts "categories:"
       file.puts "---"
-      file.puts "# Write Content Here"
+      file.puts "Write Content Here..."
     end
     puts "Opening: #{@slug}"
     system("open -a 'ia\ writer' #{@draft_dir}/#{@slug}.md")
   end
 
+  # Open Drafts
   desc "Open from the draft list"
   task :open do
     puts "List of drafts:\n".colorize(:lightblue)
@@ -44,6 +46,7 @@ namespace :draft do
     system("open -a 'ia\ writer' #{@draft_dir}/#{@post_name}")
   end
 
+  # Publish Drafts
   desc "Copy draft to production post!"
   task :publish do
     puts "List of drafts:\n".colorize(:lightblue)
@@ -75,8 +78,5 @@ task :commit do
   puts "\n## What is your commit message?".colorize(:magenta)
   @message = STDIN.gets.chomp
   status = system("git commit -am \"#{@message}\"")
-  puts status ? "-- Success --".colorize(:green) : "[FAILED]".colorize(:red)
-  puts "\n## Pushing commits to remote".colorize(:blue)
-  status = system("git push")
   puts status ? "-- Success --".colorize(:green) : "[FAILED]".colorize(:red)
 end

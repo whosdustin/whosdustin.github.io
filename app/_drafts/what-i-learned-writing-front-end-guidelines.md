@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Built A Website While Driving To SXSW
+title: What I Learned Writing Front-end Guidelines
 publish_date:
 categories: articles
 ---

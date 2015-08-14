@@ -1,0 +1,17 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<div class="home">
+  <ul class="m-post-list">
+    {% for project in site.projects %}
+      <li>
+        <h2>
+          <a href="{{ project.url | prepend: site.baseurl }}" data-event="Visited '{{ project.title }}' from '{{ page.title }}' page">{{ project.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
