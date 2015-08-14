@@ -319,7 +319,7 @@ module.exports = function (grunt) {
     },
     open: {
       dist: {
-        path: 'http://whosdustin.github.io',
+        path: 'http://whosdustin.com',
         app: 'Google Chrome'
       }
     },
