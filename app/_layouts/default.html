@@ -50,12 +50,7 @@
       <script src="/js/main.js"></script>
       <!-- endbuild -->
       <script type="text/javascript">
-      var exitLink = $('a[data-exit]');
-      analytics.page('{{ page.title }}')
-               .trackLink(exitLink, 'Exited Site', {
-                 currentPage: '{{ page.title }}',
-                 leftTo: exitLink.attr('href')
-               });
+        analytics.page('{{ page.title }}');
       </script>
 
       {% contentblock scripts %}
