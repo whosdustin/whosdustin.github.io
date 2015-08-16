@@ -434,7 +434,7 @@ module.exports = function (grunt) {
     'test',
     'build',
     'buildcontrol',
-    'open:dist'
+    // 'open:dist'
     ]);
 
   grunt.registerTask('default', [
