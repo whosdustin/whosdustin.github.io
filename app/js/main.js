@@ -11,7 +11,7 @@
 $(document).ready(function(){
   $('.js-nofollow a').NoFollow();
   // Data event tracking all links for GoSquared
-  $('[data-exit]').on('click', function() {
+  $('[data-exited]').on('click', function() {
     analytics.track('Exited', {
       page:  window.location.pathname,
       url: $(this).attr('href')
