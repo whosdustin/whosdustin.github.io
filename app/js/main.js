@@ -8,8 +8,33 @@
   };
 })(jQuery);
 
+// Set Defaults to the Validator
+jQuery.validator.setDefaults({
+  errorClass: 'has-error',
+  errorElement: 'span',
+  highlight: function(element, errorClass, errorElement) {
+    $(element).addClass(errorClass);
+  },
+  unhighlight: function(element, errorClass) {
+    $(element).removeClass(errorClass);
+  },
+  errorPlacement: function(error, element) {
+    error.addClass('help-text').insertAfter(element);
+  }
+});
+
 $(document).ready(function(){
   $('.js-nofollow a').NoFollow();
+  $('[data-validate]').validate({
+    messages: {
+      name: 'I need a name, I can\'t just call you \"blank\"',
+      _replyto: {
+        required: "How can I reply without an email?",
+        email: 'I\m looking for an email address similar to \"john-snow@thewall.com\"'
+      },
+      message: 'Anything here helps communication :)'
+    }
+  });
 
   $('.m-page-link, .m-page-title').each(function() {
     var wordArray = $(this).text().split(' ');
@@ -19,5 +44,5 @@ $(document).ready(function(){
       return $(this).html(wordArray.join(' '));
     }
   });
-  
+
 });

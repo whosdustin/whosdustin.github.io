@@ -31,10 +31,6 @@ $susy: (
   output: float,
 );
 
-// Buttons // ---------------------------------
-
-// Forms // -----------------------------------
-
 // State Colors // ----------------------------
 
 $success-color: $sushi;
@@ -44,6 +40,14 @@ $info-color: $blue-baby;
 // Brand
 $brand-primary-color: $tree-poppy;
 $layout-border-color: lighten($grey, 40%);
+
+// Buttons // ---------------------------------
+
+// Forms // -----------------------------------
+
+$input-bkg: lighten($grey, 47%);
+// $input-color;
+$input-border: $layout-border-color;
 
 // Scales // ----------------------------------
 
