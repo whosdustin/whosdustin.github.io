@@ -4,10 +4,13 @@
 //
 
 .box {
-  width: 50%;
+  width: 90%;
   background: $white;
   border-radius: 4px;
   box-shadow: 0 0 3rem -1rem $black;
+  @include media(tablet) {
+    width: 50%;
+  }
 }
 .box-header {
   text-align: center;
