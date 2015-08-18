@@ -7,6 +7,24 @@
          .attr('target', '_blank');
   };
 })(jQuery);
+;(function($){
+  'use-strict';
+  $.fn.Center = function() {
+    var $this, height, width;
+    $this = $(this);
+    height = $this.height();
+    width = $this.width();
+    return $this.each(function() {
+      $this.css({
+        'position' : 'absolute',
+        'top' : 50 + '%',
+        'left': 50 + '%',
+        'margin-top' : -(height/2) + 'px',
+        'margin-left': -(width/2) + 'px'
+      });
+    });
+  };
+})(jQuery);
 
 // Set Defaults to the Validator
 jQuery.validator.setDefaults({
@@ -25,6 +43,7 @@ jQuery.validator.setDefaults({
 
 $(document).ready(function(){
   $('.js-nofollow a').NoFollow();
+  $('#successBox').Center().fadeIn(500);
   $('[data-validate]').validate({
     messages: {
       name: 'I need a name, I can\'t just call you \"blank\"',

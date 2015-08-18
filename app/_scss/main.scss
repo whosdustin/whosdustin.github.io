@@ -16,6 +16,9 @@
 @import 'global/base';
 @import 'global/typography';
 
+// Utilities // -----------------------
+@import 'utils/helpers';
+
 // Layout // --------------------------
 @import 'layout/header';
 @import 'layout/main';
@@ -30,6 +33,7 @@
 @import 'modules/alerts';
 @import "modules/buttons";
 @import 'modules/forms';
+@import 'modules/box';
 
 // Theme // ---------------------------
 @import 'theme/brand';

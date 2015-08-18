@@ -30,16 +30,26 @@
 
     </head>
     <body>
-
+      {% if page.title != 'Success'%}
       <header role="banner" class="l-header">
         {% include header.html %}
       </header>
+      {% endif %}
       <main role="main">
         {{ content }}
       </main>
+      {% if page.title != 'Success'%}
       <footer role="contentinfo" class="l-footer">
         {% include footer.html %}
       </footer>
+      {% endif %}
+
+      {% if page.title == 'Success' %}
+        <video id="video" autoplay loop poster="https://0.s3.envato.com/files/143517199/preview.jpg">
+          <source src="https://0.s3.envato.com/h264-video-previews/4edae566-6502-4f6c-83be-4752c854fa62/12312083.mp4" type="video/mp4">
+        </video>
+      {% endif %}
+
 
       <!-- jQuery -->
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

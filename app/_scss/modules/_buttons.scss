@@ -14,8 +14,12 @@
   font-family: $font-family-secondary;
   font-size: $font-size-small;
   &:hover {
+    border: none;
     background: darken($brand-primary-color, 15%);
     color: $white;
     text-decoration: none;
+  }
+  &:visited {
+    color: $white;
   }
 }
