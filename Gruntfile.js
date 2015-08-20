@@ -315,7 +315,8 @@ module.exports = function (grunt) {
           remote: 'https://github.com/whosdustin/whosdustin.github.io.git',
           branch: 'master',
           commit: true,
-          push: true
+          push: true,
+          message: '🚀Launched from commit %sourceCommit%'
         }
       }
     },

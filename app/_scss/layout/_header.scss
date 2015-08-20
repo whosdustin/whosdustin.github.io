@@ -54,7 +54,7 @@
     float: left;
     padding: 0 2.5rem;
     font-family: $font-family-secondary;
-    font-size: $font-size-small;
+    font-size: 1.8rem;
     color: lighten($font-color, 30%);
     line-height: 5rem;
     @include media(phablet) {

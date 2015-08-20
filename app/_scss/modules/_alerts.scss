@@ -3,34 +3,34 @@
 // Alerts
 //
 
-.m-alert {
+.alert {
   @extend %vertical-rhythm;
   padding: gutter();
   border: solid 1px transparent;
   border-radius: 4px;
   font-family: $font-family-secondary;
-  font-size: $font-size-small;
+  font-size: $font-size-base * 0.85;
   text-align: center;
 }
-.m-alert-success {
+.alert-success {
   background: lighten($success-color, 40%);
   border-color: $success-color;
   color: darken($success-color, 10%);
   a {
-    @extend .m-alert-success;
+    @extend .alert-success;
     text-decoration: underline;
   }
 }
-.m-alert-info {
+.alert-info {
   background: lighten($info-color, 40%);
   border-color: $info-color;
   color: darken($info-color, 10%);
   a {
-    @extend .m-alert-info;
+    @extend .alert-info;
     text-decoration: underline;
   }
 }
-.m-alert-error {
+.alert-error {
   background: lighten($error-color, 40%);
   border-color: $error-color;
   color: darken($error-color, 10%);
