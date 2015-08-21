@@ -3,6 +3,14 @@
 // Typography
 //
 
+@font-face {
+  font-family: 'FiraMono';
+  src: url('/fonts/FiraMono/eot/FiraMono-Medium.eot');
+  src: url('/fonts/FiraMono/eot/FiraMono-Medium.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/FiraMono/woff2/FiraMono-Medium.woff2') format('woff2'),
+       url('/fonts/FiraMono/woff/FiraMono-Medium.woff') format('woff'),
+}
+
 // Headings // ----------------------------
 h1,
 h2,
@@ -26,4 +34,10 @@ h6 {
 small {
   font-family: $font-family-secondary;
   font-size: $font-size-small;
+}
+
+pre,
+code {
+  font-family: 'FiraMono';
+  letter-spacing: -1px;
 }

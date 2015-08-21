@@ -1,6 +1,13 @@
 /**
  * Syntax highlighting styles
  */
+
+ pre,
+ code {
+   color: $code-color;
+   background-color: $code-bkg;
+ }
+
 .highlight {
     @extend %vertical-rhythm;
 

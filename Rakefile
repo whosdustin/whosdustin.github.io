@@ -6,6 +6,7 @@ require 'colorize'
 @time = Time.now.utc
 @draft_dir = 'app/_drafts'
 @post_dir = 'app/_posts'
+@resume_dir = 'app/_data'
 
 ## Articles ====================================================================
 
@@ -65,6 +66,18 @@ namespace :draft do
     File.open(file, "w") { |file| file << puts }
     puts "--  Post copied and ready to deploy!  --".colorize(:green)
   end
+end
+
+## Resume Build ================================================================
+
+namespace :build do
+
+  desc "Build Resume"
+  task :resume do
+    status = system("cd #{@resume_dir} && resume export dustin-delatore-resume.pdf --theme short")
+    puts status ? "-- Success -- ".colorize(:green) : "[FAILED]".colorize(:red)
+  end
+
 end
 
 ## Source Control ==============================================================

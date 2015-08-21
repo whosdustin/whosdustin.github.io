@@ -34,11 +34,13 @@
       "website": "http://bisk.com",
       "startDate": "2014-05-01",
 
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "summary": "Worked primarily on the Bisk Learning Management System (LMS). Supported in converting the LMS from a fixed width site to a fully responsive application. Optimized the entire front-end of the LMS with thorough research and documentation of development standards. I modified the platform from a feature/page specific stylesheet to a scalable and modular architecture css using Grunt and Sass. Also, part of the first mobile development team to create Bisk's first mobile application.",
       "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
+        "Built a front-end development standards documentation",
+        "Successfully converted an application to responsive design",
+        "Optimized CSS for scalabilty and performance on page load",
+        "Kicked off Bisk's first mobile application team",
+        "Built a mobile app for iOS and Android using Appcelerator's Titanium platform"
       ]
     },
     {
