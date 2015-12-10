@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Generated on 2015-08-05 using generator-jekyllrb 1.4.1
 'use strict';
 
@@ -8,6 +9,10 @@
 //   coffeescript: _src
 //   images: img
 //   fonts: fonts
+=======
+'use strict';
+
+>>>>>>> daff475... refreshed
 
 module.exports = function (grunt) {
   // Show elapsed time after tasks run
@@ -15,6 +20,7 @@ module.exports = function (grunt) {
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
 
+<<<<<<< HEAD
   grunt.initConfig({
     // Configurable paths
     yeoman: {
@@ -354,6 +360,19 @@ module.exports = function (grunt) {
       ]
     }
   });
+=======
+  var options = {
+    config: {
+      src: '.grunt/*.js'
+    },
+    pkg: grunt.file.readJSON('package.json')
+  };
+
+  var configs = require('load-grunt-config')(grunt, options);
+
+  // Project configurations
+  grunt.initConfig(configs);
+>>>>>>> daff475... refreshed
 
   // Define Tasks
   grunt.registerTask('serve', function (target) {
@@ -388,7 +407,11 @@ module.exports = function (grunt) {
     'sass:server',
     'coffeelint:check',
     'coffee:dist',
+<<<<<<< HEAD
     'jshint:all',
+=======
+    // 'jshint:all',
+>>>>>>> daff475... refreshed
     'csslint:check'
     // 'scsslint'
   ]);
@@ -414,7 +437,12 @@ module.exports = function (grunt) {
     'check',
     'test',
     'build',
+<<<<<<< HEAD
     'buildcontrol'
+=======
+    'buildcontrol',
+    // 'open:dist'
+>>>>>>> daff475... refreshed
     ]);
 
   grunt.registerTask('default', [

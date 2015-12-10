@@ -1,0 +1,27 @@
+// Copyright 2015 WhosDustin.com
+//
+// Boxes
+//
+
+.box {
+  width: 90%;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 0 3rem -1rem $black;
+  @include media(tablet) {
+    width: 50%;
+  }
+}
+.box-header {
+  text-align: center;
+  padding: 2rem;
+}
+.box-title {
+  margin: 0;
+}
+.box-body {
+  padding: 2rem;
+}
+.box-header + .box-body {
+  padding-top: 0;
+}

@@ -1,0 +1,95 @@
+// Copyright 2015 Whosdustin.com
+//
+// Variables
+//All global variables reside in this file.
+
+// Scaffolding // ------------------------------
+
+// Base nimber for HTML font size. USed to keep rem
+// font sizes at base 10. 1rem = 10px.
+$html-base: 62.5%;
+
+// Typography // -------------------------------
+
+$font-family-primary: 'Gentium Book Basic',Georgia, serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+
+// Global Text Color
+$font-color: $emperor;
+
+// Global Font Styling
+$font-size-base: 2.2rem !default;
+$font-size-small: $font-size-base * 0.6818 !default;
+$line-height-base: 1.6 !default;
+
+// Grid Settings // ---------------------------
+$susy: (
+  container: auto,
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+);
+
+// State Colors // ----------------------------
+
+$success-color: $sushi;
+$error-color: $thunderbird;
+$info-color: $blue-baby;
+
+// Brand
+$brand-primary-color: $tree-poppy;
+$layout-border-color: lighten($grey, 40%);
+
+// Code - Github
+// $code-color: $emperor;
+// $code-bkg: $white;
+// Code - Monokai
+$code-color: #abb2bf;
+$code-bkg: #282c34;
+
+// Buttons // ---------------------------------
+
+// Forms // -----------------------------------
+
+$input-bkg: lighten($grey, 47%);
+// $input-color;
+$input-border: $layout-border-color;
+
+// Scales // ----------------------------------
+
+// Font-weight Scale
+$font-thin:           100;
+$font-extra-light:    200;
+$font-light:          300;
+$font-normal:         400;
+$font-medium:         500;
+$font-semi-bold:      600;
+$font-bold:           700;
+$font-extra-bold:     800;
+$font-black:          900;
+
+// Z-index Scale
+$z-index-1:           100;
+$z-index-2:           200;
+$z-index-3:           300;
+$z-index-4:           400;
+$z-index-5:           500;
+$z-index-6:           600;
+$z-index-7:           700;
+$z-index-8:           800;
+$z-index-9:           900;
+$z-index-10:          1000;
+
+// Z-index Names
+$z-header: $z-index-1;
+
+// Media Queries Breakpoints // ---------------
+
+$bp-smallest:     24.615em; // 320px
+$bp-smaller:      36.923em; // 480px
+$bp-small:        46.154em; // 600px
+$bp-medium:       59.077em; // 768px
+$bp-large:        69.231em; // 900px
+$bp-larger:       84.615em; // 1100px
+$bp-largest:      100em;    // 1300px

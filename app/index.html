@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+
+  <ul class="m-post-list">
+    {% for post in site.posts %}
+      <li>
+        <h2>
+          <a href="{{ post.url | prepend: site.baseurl }}" data-event="Visited '{{ post.title }}' from '{{ page.title }}' page">{{ post.title }}</a>
+        </h2>
+
+        <span class="m-post-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </span>
+
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

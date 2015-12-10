@@ -1,0 +1,17 @@
+// Copyright 2015 Whosdustin.com
+//
+// Footer Layout
+//
+
+.l-footer {
+  padding: gutter() 0;
+  border-top: solid 1px lighten($grey, 40%);
+  font-size: $font-size-base * 0.65;
+  color: $grey;
+  .l-row {
+    @include container(90%);
+    @include media(tablet) {
+      @include container(60%);
+    }
+  }
+}

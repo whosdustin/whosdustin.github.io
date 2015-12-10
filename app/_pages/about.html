@@ -1,0 +1,38 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+{% if site.author.available %}
+  <div class="alert alert-success">
+    Available for work. <a href="/cv/" data-metric="Visited" data-metric-from"{{ page.title }} page" data-metric-top="Resume page">View my resumé</a>.
+  </div>
+{% else %}
+  <div class="alert alert-info">
+    Not currently available for additional work.
+  </div>
+{% endif %}
+
+{{ site.description }}
+
+<h2>Contact</h2>
+<p>
+  If you have any questions, comments, or would just like to say hello, feel free to send me an email...
+</p>
+<form data-validate accept-charset="UTF-8" action="//formkeep.com/f/c813cec35307" method="post">
+  <div class="form-group">
+    <label for="name">Name <small>(required)</small></label>
+    <input type="text" class="form-input" name="name" value="" required>
+  </div>
+  <div class="form-group">
+    <label for="_replyto">Email <small>(required)</small></label>
+    <input type="email" class="form-input" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message <small>(required)</small></label>
+    <textarea name="message" class="form-input" rows="4" required></textarea>
+  </div>
+  <button type="submit" class="btn" name="name" data-metric="Email" data-metric-event="From Submitted">Send</button>
+  <input type="hidden" name="utf8" value="✓">
+</form>

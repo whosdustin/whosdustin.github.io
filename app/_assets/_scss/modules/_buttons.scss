@@ -1,0 +1,25 @@
+// Copyright 2015 WhosDustin.com
+//
+// Buttons
+//
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: auto;
+  border: none;
+  border-radius: 3px;
+  background: $brand-primary-color;
+  color: $white;
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  &:hover {
+    border: none;
+    background: darken($brand-primary-color, 15%);
+    color: $white;
+    text-decoration: none;
+  }
+  &:visited {
+    color: $white;
+  }
+}

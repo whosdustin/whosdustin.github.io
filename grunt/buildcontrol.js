@@ -5,7 +5,10 @@ module.exports = {
       branch: 'master',
       commit: true,
       push: true,
+<<<<<<< HEAD
       force: true,
+=======
+>>>>>>> daff475... refreshed
       message: '🚀Launched from commit %sourceCommit%'
     }
   }
