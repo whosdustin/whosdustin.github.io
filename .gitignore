@@ -33,11 +33,11 @@ Thumbs.db
 *.zip
 
 # Ignore for Yeoman-Jekyll projects #
-app/_bower_components
+app/_assets/bower
 dist
 node_modules
-.tmp
 dustin-delatore-resume.pdf
+Gemfile.lock
 
 # Ignore for RVM users #
 .ruby-version

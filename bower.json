@@ -2,6 +2,7 @@
   "name": "whosdustincom",
   "version": "0.0.0",
   "dependencies": {
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "jquery-validation": "jquery-validate#~1.14.0"
   }
 }
