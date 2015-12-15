@@ -38,6 +38,8 @@ dist
 node_modules
 dustin-delatore-resume.pdf
 Gemfile.lock
+.sass-cache
+.tmp
 
 # Ignore for RVM users #
 .ruby-version
