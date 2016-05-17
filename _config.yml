@@ -8,27 +8,32 @@ name: whosdustin.com
 description: > #
               Front-end developer with an extensive knowledge in user experience.
               Seven years design experience and once nominated for a CSS Design
-              Award. Actively working as a Front-end developer for Bisk Education.
+              Award. Actively working at Bisk.
 author:
   name: Dustin Delatore
   email: dustin@delatore.me
-  available:
+  available: true
 twitter_username: whos_dustin
 github_username:  whosdustin
 dribbble_username: whosdustin
 
-navigation:
- - title: Articles
-   url: /articles
- - title: About
-   url: /about
+collections:
+  talks:
+    ouput: true
+    permalink: /talks/:path/
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
-include: ['.htaccess', '_pages']
+include: ['.htaccess', '_pages', '_talks']
 
 gems:
   - jekyll-sitemap
@@ -43,17 +48,5 @@ permalink: none
 
 # Markdown library
 markdown: kramdown
-#   auto_ids: true
-#   footnote_nr: 1
-#   entity_output: as_char
-#   toc_levels: 1..6
-#   use_coderay: false
-#   coderay:
-#     coderay_wrap: div
-#     coderay_line_numbers: inline
-#     coderay_line_numbers_start: 1
-#     coderay_tab_width: 4
-#     coderay_bold_every: 10
-#     coderay_css: style
 
 highlighter: rouge

@@ -124,7 +124,7 @@
 // Image Pulling // ---------------------------------------
 
 @mixin img-pull($direction) {
-  margin: gutter();
+  margin: $gutter-width;
   margin-top: 0;
   margin-#{$direction}: -50px;
   float: #{$direction};

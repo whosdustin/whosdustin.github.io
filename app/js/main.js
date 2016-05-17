@@ -44,6 +44,7 @@ jQuery.validator.setDefaults({
 $(document).ready(function(){
   $('.js-nofollow a').NoFollow();
   $('#successBox').Center().fadeIn(500);
+  $('.hero .wrapper').Center().fadeIn(500);
   $('[data-validate]').validate({
     messages: {
       name: 'I need a name, I can\'t just call you \"blank\"',
@@ -55,7 +56,7 @@ $(document).ready(function(){
     }
   });
 
-  $('.m-page-link, .m-page-title').each(function() {
+  $('.page-link, .page-title, .post-list h2 a').each(function() {
     var wordArray = $(this).text().split(' ');
     if (wordArray.length > 1) {
       wordArray[wordArray.length - 2] += '&nbsp;' + wordArray[wordArray.length - 1];
@@ -65,3 +66,12 @@ $(document).ready(function(){
   });
 
 });
+
+function priceCheck() {
+  var val = document.getElementById('price').value;
+  if (val > 999) {
+     document.getElementById('jsShow').style.display = "block";
+  } else {
+    document.getElementById('jsShow').style.display = "none";
+  }
+}

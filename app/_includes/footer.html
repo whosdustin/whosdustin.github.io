@@ -1,37 +1,29 @@
-<section class="l-row">
-  <div class="l-half">
-    <ul class="list-unstyle">
-      {% if site.github_username %}
-      <li>
-        <a href="https://github.com/{{ site.github_username }}" data-event="Opened Github from the Footer on  '{{ page.title }}' page">
-          <span class="username">Github</span>
-        </a>
-      </li>
-      {% endif %}
-      {% if site.twitter_username %}
-      <li>
-        <a href="https://twitter.com/{{ site.twitter_username }}" data-event="Opened Twitter from the Footer on '{{ page.title }}' page">
-          <span class="username">Twitter</span>
-        </a>
-      </li>
-      {% endif %}
-      {% if site.dribbble_username %}
-      <li>
-        <a href="http://dribbble.com/{{ site.dribbble_username }}" data-event="Opened Dribbble from the Footer on '{{ page.title }}' page">
-          <span>Dribbble</span>
-        </a>
-      </li>
-      {% endif %}
-      <li class="rss-subscribe">
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" data-event="Subscribed to RSS from the Footer on '{{ page.title }}' page">
-          <span>RSS</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="l-half l-last">
-    <p>
-      {{ site.description | truncatewords: 13 }} Learn more <a href="/about/" data-event="Visited 'About' from the Footer on '{{ page.title }}' page">about me</a>.
-    </p>
-  </div>
-</section>
+<footer role="contentinfo" class="footer wrapper">
+  <section class="row">
+    <div class="column column--centered column--1-of-2">
+      <p class="text--center">
+        {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" >
+            <span class="username">Github</span>
+          </a>
+          •
+        {% endif %}
+        {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}">
+            <span class="username">Twitter</span>
+          </a>
+          •
+        {% endif %}
+        {% if site.dribbble_username %}
+          <a href="http://dribbble.com/{{ site.dribbble_username }}" >
+            <span>Dribbble</span>
+          </a>
+          •
+        {% endif %}
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" >
+            <span>RSS</span>
+          </a>
+      </p>
+    </div>
+  </section>
+</footer>

@@ -5,15 +5,10 @@
 
 // Dom Styles // -----------------------------
 
-html {
-  font-size: $html-base;
-}
+// html {
+//   font-size: $html-base;
+// }
 body {
-  font-family: $font-family-primary;
-  font-size: $font-size-base;
-  font-weight: $font-normal;
-  line-height: $line-height-base;
-  color: $font-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
@@ -21,23 +16,30 @@ body {
 // Link Styles // ---------------------------
 
 a {
-  color: $brand-primary-color;
+  color: $font-color-base;
   text-decoration: none;
   &:visited {
-    color: darken($brand-primary-color, 15%);
+    color: darken($font-color-base, 15%);
   }
   &:hover {
-    border-bottom: solid 1px $font-color;
-    color: $font-color;
+    // border-bottom: solid 1px $font-color-base;
+    color: $font-color-base;
     text-decoration: none;
   }
+}
+
+p > a {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.5) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 ($font-size-base - 2);
 }
 
 // Code Formating // -----------------------------
 pre,
 code {
   border-radius: 3px;
-  font-size: 15px;  
+  font-size: 15px;
 }
 
 code {
@@ -62,7 +64,6 @@ blockquote {
   font-size: 2rem;
   letter-spacing: -1px;
   font-style: italic;
-//  @include margin(null em(-50px) null em(-50px));
   > :last-child {
       margin-bottom: 0;
   }
@@ -71,12 +72,11 @@ blockquote {
 // Horizontal Rule
 
 hr {
-  color: $grey;
-  width: 60%;
+  margin: ($gutter-width * 4) 0;
+  color: #ccc;
   border: none;
   height: 0;
-  border-top: dotted 1px $grey;
-  margin: gutter() * 4 auto;
+  border-top: dotted 1px #ccc;
   text-align:center;
   &:after{
     content: '§';
@@ -85,7 +85,7 @@ hr {
     top: -0.7em;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: $white;
+    background: #fff;
   }
 }
 

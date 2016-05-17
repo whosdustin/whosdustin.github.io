@@ -1,0 +1,26 @@
+---
+permalink: '/talks/'
+title: Talks
+---
+
+<header class="column column--centered column--2-of-3">
+  <h1 class="page-title">{{page.title}}</h1>
+  {% if site.talks.size < 2 %}
+    <p class="page-meta">
+      As of now, I only have one talk. It was my first and I have full intentions of speaking more often.
+    </p>
+  {% endif %}
+</header>
+
+<section class="column column--centered column--2-of-3">
+  <ul class="post-list">
+    {% for talk in site.talks %}
+      <li>
+        <h2><a href="{{talk.url}}" title="{{talk.title}}">{{talk.title}}</a></h2>
+        <span class="post-meta">
+          {{ talk.date | date: "%b %-d, %Y" }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

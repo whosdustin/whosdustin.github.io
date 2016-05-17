@@ -1,17 +1,14 @@
-// Copyright 2015 Whosdustin.com
+// // Copyright 2015 Whosdustin.com
+// //
+// // Footer Layout
+// //
 //
-// Footer Layout
-//
-
-.l-footer {
-  padding: gutter() 0;
-  border-top: solid 1px lighten($grey, 40%);
+.footer {
+  padding: 2rem 0;
+  border-top: solid 1px $layout-border-color;
   font-size: $font-size-base * 0.65;
-  color: $grey;
-  .l-row {
-    @include container(90%);
-    @include media(tablet) {
-      @include container(60%);
-    }
-  }
+  font-family: $font-family-secondary;
+}
+.footer a {
+  font-family: $font-family-secondary;
 }

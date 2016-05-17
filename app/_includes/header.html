@@ -1,12 +1,18 @@
-<a class="l-header-title" href="{{ site.baseurl }}/" data-event="Went 'Home' from the Logo on '{{ page.title }}' page">
-  {% include lgo-whosdustin.svg %}
-</a>
-<nav class="l-header-nav">
-  {% for link in site.navigation %}
-  {% assign current = nil %}
-  {% if page.url contains link.url %}
-    {% assign current = 'current' %}
-  {% endif %}
-    <a href="{{ link.url }}"  class="{% if current %} {{ current }} {% endif %} page-link" data-event="Visited '{{ link.title }}' from the Header on '{{ page.title }}' page">{{ link.title }}</a>
-  {% endfor %}
-</nav>
+<header role="banner" class="masthead">
+    <div class="row">
+      <div class="column column--2-of-2">
+        <a class="masthead-title" href="{{ site.baseurl }}/">
+          {% include lgo-whosdustin.svg %}
+        </a>
+        <nav class="masthead-nav">
+          {% for link in site.data.navigation.main %}
+          {% assign current = nil %}
+          {% if page.url contains link.url %}
+            {% assign current = 'current' %}
+          {% endif %}
+            <a href="{{ link.url }}"  class="{% if current %} {{ current }} {% endif %} masthead-link" >{{ link.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+</header>

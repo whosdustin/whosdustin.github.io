@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~> 2.3.0'
+gem 'jekyll', '~> 3.0.5'
 gem 'kramdown'
 gem 'rouge'
 gem 'sass', '~> 3.4.3'

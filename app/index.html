@@ -1,23 +1,54 @@
 ---
-layout: default
 title: Home
 ---
+<!-- Hero -->
+<section class="hero">
+  <div class="wrapper text--center" style="display:none;">
+    <div class="column column--centered column--2-of-3">
+      <h1 class="hero-title">
+        Hi, I'm Dustin Delatore 😄
+      </h1>
+      <p class="hero-text">
+        A front-end developer with an extensive knowledge in user experience. In addition to years of Ui design under my belt.
+      </p>
+    </div>
+  </div>
+</section>
 
-<div class="home">
+  <section class="column column--centered column--2-of-3">
+    <div class="row">
+      <section class="column column--1-of-2">
+        <h2>Latest Articles</h2>
+        <ul class="post-list">
+          {% for post in site.posts limit: 2%}
+            <li>
+              <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}" title="{{post.title}}">{{ post.title }}</a>
+              </h2>
 
-  <ul class="m-post-list">
-    {% for post in site.posts %}
-      <li>
-        <h2>
-          <a href="{{ post.url | prepend: site.baseurl }}" data-event="Visited '{{ post.title }}' from '{{ page.title }}' page">{{ post.title }}</a>
-        </h2>
+              <span class="post-meta">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </span>
 
-        <span class="m-post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="column column--1-of-2">
+        <h2>Latest Talks</h2>
+        <ul class="post-list">
+          {% for talk in site.talks limit: 2%}
+            <li>
+              <h2>
+                <a href="{{ talk.url | prepend: site.baseurl }}" title="{{talk.title}}">{{ talk.title }}</a>
+              </h2>
 
-      </li>
-    {% endfor %}
-  </ul>
+              <span class="post-meta">
+                {{ talk.date | date: "%b %-d, %Y" }}
+              </span>
 
-</div>
+            </li>
+          {% endfor %}
+      </section>
+    </div>
+  </section>

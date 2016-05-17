@@ -4,7 +4,7 @@
 // Module styles a list of posts for the blog
 // Created for the ability to update home page freely
 
-.m-post-list {
+.post-list {
   padding-left: 0;
   list-style: none;
   text-align: left;
@@ -15,6 +15,6 @@
     margin-bottom:0;
   }
 }
-.m-post-meta {
-    color: $grey;
+.post-meta {
+    color: #ccc;
 }

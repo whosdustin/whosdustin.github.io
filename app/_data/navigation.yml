@@ -1,0 +1,7 @@
+main:
+  - title: Articles
+    url: /articles/
+  - title: Talks
+    url: /talks/
+  - title: About
+    url: /about/
