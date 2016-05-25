@@ -28,7 +28,7 @@
 
 // Set Defaults to the Validator
 jQuery.validator.setDefaults({
-  errorClass: 'has-error',
+  errorClass: 'form__input--has-error',
   errorElement: 'span',
   highlight: function(element, errorClass, errorElement) {
     $(element).addClass(errorClass);
@@ -37,18 +37,16 @@ jQuery.validator.setDefaults({
     $(element).removeClass(errorClass);
   },
   errorPlacement: function(error, element) {
-    error.addClass('help-text').insertAfter(element);
+    error.addClass('form__help-text').insertAfter(element);
   }
 });
 
 $(document).ready(function(){
   $('.js-nofollow a').NoFollow();
-  $('#successBox').Center().fadeIn(500);
   $('.hero .wrapper').Center().fadeIn(500);
   $('[data-validate]').validate({
     messages: {
-      name: 'I need a name, I can\'t just call you \"blank\"',
-      _replyto: {
+      email: {
         required: "How can I reply without an email?",
         email: 'I\m looking for an email address similar to \"john-snow@thewall.com\"'
       },
@@ -65,13 +63,43 @@ $(document).ready(function(){
     }
   });
 
-});
+  var priceKey = 0;
+  $('#priceInput').keyup(function(event) {
+    if(event.which >= 37 && event.which <= 40) return;
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, '')
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    });
+    var val = $(this).val().replace(/,/g, '');
+    if (val > 2999) {
+       $('#priceButton').removeClass("button--is-disabled");
+    } else {
+      $('#priceButton').addClass("button--is-disabled");
+    }
+    priceKey++;
+    if (priceKey == 7) {
+      $('.form__input--money').append('<span class=\'form__help-text form__help-text--has-success\'>For real? I\'d be honored to work with you.</span>');
+      $(this).addClass('form__input--has-success');
+    } else if (val.length < 6) {
+      $(this).removeClass('form__input--has-success');
+      $('#priceInput + .form__help-text').remove();
+    }
+  });
 
-function priceCheck() {
-  var val = document.getElementById('price').value;
-  if (val > 999) {
-     document.getElementById('jsShow').style.display = "block";
-  } else {
-    document.getElementById('jsShow').style.display = "none";
-  }
-}
+  $('#priceButton').click(function() {
+    var val = $('#priceInput').val();
+    $('#jsShow').addClass('sidepanel--is-visible');
+    $('#jsShow input[name=subject]').val('My budget is $' + val);
+    $('#jsShow textarea[name=message]').val('Hey Dustin,\n\nThe project includes...');
+  });
+
+  $('.sidepanel-close').click(function() {
+    if ($('#jsShow').hasClass('sidepanel--is-visible')) {
+      $('#jsShow').removeClass('sidepanel--is-visible');
+    }
+  });
+
+
+});

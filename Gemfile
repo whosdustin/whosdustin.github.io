@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem 'jekyll', '~> 3.0.5'
-gem 'kramdown'
+gem 'redcarpet'
 gem 'rouge'
 gem 'sass', '~> 3.4.3'
 gem 'rake'

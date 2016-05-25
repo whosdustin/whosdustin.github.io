@@ -1,8 +1,6 @@
 require 'fileutils'
 require 'colorize'
 
-load 'tasks/emoji.rake'
-
 # task :default => :draft:new
 
 @time = Time.now.utc

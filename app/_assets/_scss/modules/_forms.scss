@@ -1,3 +1,8 @@
+.form__input {
+  font-family: $font-family-secondary;
+  font-size: 0.8em;
+}
+
 .form__input--money {
   position: relative;
   &:after {
@@ -9,7 +14,4 @@
   input {
     padding-left: 25px;
   }
-}
-.button {
-  font-size: 0.7em;
 }

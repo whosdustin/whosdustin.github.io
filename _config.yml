@@ -5,14 +5,14 @@
 
 title: Who's Dustin
 name: whosdustin.com
-description: > #
-              I’m a front-end developer located in Orlando, FL, and have extensive knowledge in user experience.
-              On top of that, I have years of design experience and was once nominated for a CSS Design
-              Award. Actively working at Bisk.
+description: >
+            I’m a front-end developer located in Orlando, FL, and have extensive knowledge in user experience.
+            On top of that, I have years of design experience and was once nominated for a CSS Design
+            Award. Proudly working at [Three21](http://three21creative.com).
 author:
   name: Dustin Delatore
   email: dustin@delatore.me
-  available:
+  available: true
 twitter_username: whos_dustin
 github_username:  whosdustin
 dribbble_username: whosdustin
@@ -47,6 +47,6 @@ show_drafts: true
 permalink: none
 
 # Markdown library
-markdown: kramdown
+markdown: redcarpet
 
 highlighter: rouge
