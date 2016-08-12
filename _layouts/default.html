@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body class="{% body_class %}">
+		{% include header.html %}
+
+		<main role="main" class="main__container">
+			{{ content }}
+		</main>
+
+		{% include footer.html %}
+
+		<script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
+  </body>
+</html>

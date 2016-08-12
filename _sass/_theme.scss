@@ -1,0 +1,13 @@
+// SVG classes
+.st0{fill: #343434;}
+.st1{fill:lighten(#343434, 25%)}
+
+$categories: ('til', 'show', 'listen', 'watch');
+
+@each $category in $categories {
+	.categories__#{$category} {
+		// background: url('../images/bkg-#{$category}.jpg');
+		// background-position: top center;
+		// background-repeat: no-repeat;
+	}
+}

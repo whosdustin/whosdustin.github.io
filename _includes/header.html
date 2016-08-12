@@ -1,0 +1,17 @@
+<header class="masthead" role="banner">
+	<a class="masthead__brand" href="{{ site.baseurl }}/" itemscope itemtype="https://schema.org/Brand">
+		<span itemprop="logo">
+			{% include lgo-whosdustin.svg %}
+		</span>
+	</a>
+	<nav class="masthead__nav">
+		<a class="masthead__navitem" href="{{ site.baseurl }}/">Home</a>
+		{% for page in site.pages %}
+			{% if page.title %}
+				<a class="masthead__navitem" href="{{ page.url | prepend: site.baseurl }}">
+					{{ page.title }}
+				</a>
+			{% endif %}
+		{% endfor %}
+	</nav>
+</header>

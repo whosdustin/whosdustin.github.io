@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% assign cat = page.categories | join: ' ' %}
+<article class="main__article main__til card card__feature" itemscope itemtype="http://schema.org/BlogPosting">
+
+	<header>
+		<h1 class="card__title" itemprop="name headline">{{ page.title }}</h1>
+		<p class="card__meta">
+			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+				{{ page.date | date: "%b %-d, %Y" }}
+			</time>
+ 			{% if cat %}
+				• <span>{{cat}}</span>
+			{% endif %}
+			{% if page.author %}
+				<span class="right" itemprop="author" itemscope itemtype="http://schema.org/Person">
+					<img class="sr-only" itemprop="image" src="{{ site.baseurl }}/images/img-dustin-delatore.jpeg" alt="Dustin Delatore's glorious face" />
+					<span itemprop="name">{{ page.author }}</span>
+				</span>
+			{% endif %}
+		</p>
+	</header>
+
+	<div itemprop="articleBody">
+		{{ content }}
+	</div>
+
+</article>

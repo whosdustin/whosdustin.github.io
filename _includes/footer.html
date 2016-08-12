@@ -1,0 +1,25 @@
+<footer class="main__container footer" role="contentinfo">
+	<nav>
+		{% if site.github_username %}
+			<a class="footer__navitem" href="https://github.com/{{ site.github_username }}" >
+				Github
+			</a>
+			•
+		{% endif %}
+		{% if site.twitter_username %}
+			<a class="footer__navitem" href="https://twitter.com/{{ site.twitter_username }}">
+				Twitter
+			</a>
+			•
+		{% endif %}
+		{% if site.dribbble_username %}
+			<a class="footer__navitem" href="http://dribbble.com/{{ site.dribbble_username }}" >
+				Dribbble
+			</a>
+			•
+		{% endif %}
+		<a class="footer__navitem" href="{{ "/feed.xml" | prepend: site.baseurl }}" >
+			RSS
+		</a>
+	</nav>
+</footer>
