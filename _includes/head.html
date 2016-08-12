@@ -6,7 +6,21 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+	<!-- DNS Prefetch -->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link href='//fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link rel="dns-prefetch" href="//platform.twitter.com">
+
+	<!-- Styles -->
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<!-- <link rel="stylesheet" href="{{ "/css/color.css" | prepend: site.baseurl }}"> -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="{{ site.twitter_username }}">
+	<meta name="twitter:domain" content="{{ site.url }}">
+	<meta name="twitter:creator" content="{{ site.twitter_username }}">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+
 </head>

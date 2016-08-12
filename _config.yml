@@ -6,16 +6,33 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Whos Dustin
+email: dustin@delatore.me
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://whosdustin.com" # the base hostname & protocol for your site
+twitter_username: whos_dustin
+github_username:  whosdustin
+dribbble_username: whosdustin
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Dustin Delatore"
+
+collections:
+  talks:
+    output: true
+    permalink: /talks/:path/
+
+permalink: /articles/:title/
+highlighter: rouge
 # Build settings
 markdown: kramdown

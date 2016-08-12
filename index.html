@@ -2,22 +2,32 @@
 layout: default
 ---
 
-<div class="home">
+{% for post in site.posts limit: 1 %}
+	{% assign cat = post.categories | join: '' | downcase %}
+	<div class="main__item card card__feature card__{{ cat }}">
+		<span class="card__subtitle">Latest Article</span>
+		<h2 class="card__title">{{ post.title }}</h2>
+		<span class="card__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<div class="card__content">
+			{{ post.content | truncatehtml | truncatewords: 60 }}
+		</div>
+		<a class="button" href="{{ post.url | prepend: site.baseurl }}">Continue reading...</a>
+	</div>
+{% endfor %}
 
-  <h1 class="page-heading">Posts</h1>
+<aside class="main__aside menu">
+	<h3>Other Articles</h3>
+	{% for post in site.posts offset: 1  limit: 10 %}
+		{% assign cat = post.categories | join: ' ' %}
+			<a class="menu__item menu__link" href="{{ post.url | prepend: site.baseurl }}">
+				<h4 class="menu__title">{{ post.title }}</h4>
+				<span class="menu__meta">
+					<time  datetime="{{post.date}}">
+						{{ post.date | date: "%b %-d, %Y" }}
+					</time>
+					• <span>{{cat}}</span>
+				</span>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+			</a>
+	{% endfor %}
+</aside>

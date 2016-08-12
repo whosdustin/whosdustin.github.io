@@ -1,0 +1,84 @@
+$font-color-base: white;
+$white: #1394FE;
+$grey: darken($white, 30%);
+
+body {
+	color: $font-color-base;
+	background: $white;
+}
+
+a {
+	color: $font-color-base;
+	&::after {
+		border-top: $font-color-base;
+	}
+}
+
+.button {
+	border-top: $font-color-base;
+	color: $font-color-base;
+	&::before {
+		background: $font-color-base;
+	}
+	&:hover {
+		color: $white;
+		&::after {
+			border-top: rgba($white,0);
+		}
+	}
+}
+
+.footer {
+	color: $grey;
+	&::after,
+	&::before {
+		background: $font-color-base;
+	}
+}
+
+.footer__navitem {
+	color: $grey;
+	&::after {
+		background: $font-color-base;
+	}
+	&:hover {
+		color: $font-color-base;
+	}
+}
+
+.masthead__navitem {
+	color: $font-color-base;
+	&::after {
+		background: $font-color-base;
+	}
+}
+
+.menu__item .menu__meta {
+	color: $grey;
+}
+
+.menu__item.menu__link {
+	color: $font-color-base;
+	&::before,
+	&::after {
+		background: $font-color-base;
+	}
+}
+
+.card__feature .card__title {
+	border-bottom-color: $font-color-base;
+}
+
+.card__feature .card__meta {
+	color: $grey;
+}
+
+.card__feature .card__content {
+	&::after {
+		background: linear-gradient(rgba($white, 0), rgba($white, 1));
+	}
+}
+
+
+.st0{fill: $font-color-base;}
+.st1{fill:lighten($font-color-base, 25%)}
