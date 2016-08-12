@@ -13,12 +13,14 @@
 	&::before {
 		top: 0;
 		height: 2px;
-		width: 80%;
+		left: 10%;
+		right: 10%;
 	}
 	&::after {
 		top: 8px;
 		height: 1px;
-		width: 80%;
+		left: 20%;
+		right: 20%;
 	}
 }
 
