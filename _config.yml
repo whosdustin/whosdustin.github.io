@@ -25,6 +25,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      categories: ""
       author: "Dustin Delatore"
 
 collections:
