@@ -3,11 +3,9 @@ title: "Asset Naming Consistency"
 date: 2016-05-05
 categories: "Show"
 ---
-Finding image assets in a directory can be a pain in the ass. They tend to have crazy names and lack consistency using numbers, camel case, dashes, and underscores. I've seen an attempt of naming conventions that explain everything that is going on in an image. Some have the size of the image, the name of the image (ex. Brand_Logo_White_240x240.png).
+Finding image assets in a directory can be a pain in the ass. They tend to have crazy names and lack consistency using numbers, camel case, dashes, and underscores. There have been attempts at naming conventions that explain every detail of the image. Some files may state the size, the name, colors, and size (ex. Brand_Logo_White_240x240.png).
 
-The worst I've, is if the name comes straight from the camera to the developer. Names from the camera mean nothing to a developer or even a designer for that matter. (ex. _DCMI039476301.jpg_). How is this supposed to be helpful for besides the photographer?
-
-Organization is key and helps balance the speed between the folder structure and the code where developers only see the words of the image. With a proper/simple naming convention both designers and developers can work quickly and easily. Plus the handoff is far simpler for both parties.
+The worst is if the name comes straight from a camera to the developer. Names from the camera mean nothing to a developer or even a designer for that matter. (ex. _DCMI039476301.jpg_). Who is this supposed to be helpful for besides possibly the photographer? With a proper/simple naming convention both designers and developers can work quickly and easily.
 
 ## Prefix Name With Asset Type
 
