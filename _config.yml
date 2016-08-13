@@ -18,6 +18,9 @@ twitter_username: whos_dustin
 github_username:  whosdustin
 dribbble_username: whosdustin
 
+gems:
+  - jekyll-sitemap
+
 defaults:
   -
     scope:
