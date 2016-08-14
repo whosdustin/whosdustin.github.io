@@ -6,20 +6,22 @@ layout: default
 
 	<header>
 		<h1 class="card__title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="card__meta">
-			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-				{{ page.date | date: "%b %-d, %Y" }}
-			</time>
- 			{% if cat %}
-				• <span>{{cat}}</span>
-			{% endif %}
+		<div class="card__meta">
+			<div>
+				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+					{{ page.date | date: "%b %-d, %Y" }}
+				</time>
+	 			{% if cat %}
+					• <span>{{cat}}</span>
+				{% endif %}
+			</div>
 			{% if page.author %}
-				<span class="right" itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<div itemprop="author" itemscope itemtype="http://schema.org/Person">
 					<img class="sr-only" itemprop="image" src="{{ site.baseurl }}/images/img-dustin-delatore.jpeg" alt="Dustin Delatore's glorious face" />
 					<span itemprop="name">{{ page.author }}</span>
-				</span>
+				</div>
 			{% endif %}
-		</p>
+		</div>
 	</header>
 
 	<div itemprop="articleBody">
