@@ -1,8 +1,10 @@
 ---
-title: New Draft
-date: '2016-08-11 23:00:00'
+title: Simplicity of Flexbox
+date: '2016-08-11 00:00:00'
 layout: post
-categories: Show
+categories: TIL
 author: Dustin Delatore
 ---
-This is my most recent draft.
+## Why
+## How
+## What
