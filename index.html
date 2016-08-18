@@ -1,6 +1,16 @@
 ---
 layout: default
+title: Dustin Delatore a Ui Developer
 ---
+
+<div class="bio" itemscope itemtype="https://schema.org/Person">
+	<div class="bio__content">
+		<h1 class="bio__title"><span itemprop="givenName">Dustin</span> is a <span itemprop="jobTitle">Ui&nbsp;Developer</span>.</h1>
+	</div>
+	<div class="bio__media">
+		<img itemprop="image" src="images/img-dustin-delatore.png" alt="Dustin Delatore" />
+	</div>
+</div>
 
 {% for post in site.posts limit: 1 %}
 	{% assign cat = post.categories | join: '' | downcase %}

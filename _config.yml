@@ -8,10 +8,7 @@
 # Site settings
 title: Whos Dustin
 email: dustin@delatore.me
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: > # Dustin is a Ui developer located in Orlando, FL, and have extensive knowledge in user experience. On top of that, I have years of design experience and was once nominated for a CSS Design Award. Currently, working at Three21.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://whosdustin.com" # the base hostname & protocol for your site
 twitter_username: whos_dustin
