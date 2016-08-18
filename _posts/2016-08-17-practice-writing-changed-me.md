@@ -1,10 +1,16 @@
 ---
-title: Practice Writing Changed Me
-date: '2015-03-03 09:56:00'
+title: 750 Words Helped Me
+date: '2015-03-03 09:30:00'
 layout: post
 categories: TIL
 author: Dustin Delatore
 ---
+Earlier this year I started privately writing [750 words](http://750words.com/) every day. It didn't matter what words I typed, just that I was typing. Most of the time I write jibberish along with the occasional complaining. At first it seemed like the keyboard was my psychiatrist.
+
+Below is my favorite passage to date. The passage helped me realize the potential of annonymous writing daily. I felt the need to share.
+
+---
+
 I did it! I successfully wrote myself into the opportunity of a life time. I’ve been constantly writing about how I want to travel and experience the world and all of its different cultures. I have finally hit the jackpot while researching a new calendar app to take down my healthy meals for the week.
 
 It all started with a few keystrokes of a dream and morphing into a very plausible reality. I’ve been writing these passages for only a few weeks now and I didn’t know what would come out of doing so. I enjoyed being able to write whatever I wanted with no judgement of grammar or telling me no I can’t do anything. I’ve had the ultimate freedom writing down my inner most thoughts to a permanent world where my dreams have a more possible outcome.
