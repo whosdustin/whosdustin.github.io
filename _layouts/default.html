@@ -13,6 +13,17 @@
 	<body>
 		{% include header.html %}
 
+		{% if page.url == '/' %}
+			<div class="bio">
+				<div class="bio__content">
+					<h1 class="bio__title">Dustin is a Ui&nbsp;Developer.</h1>
+				</div>
+				<div class="bio__media">
+					<img src="images/img-dustin-delatore.png" alt="Dustin Delatore" />
+				</div>
+			</div>
+		{% endif %}
+
 		<main role="main" class="main__container">
 			{{ content }}
 		</main>
