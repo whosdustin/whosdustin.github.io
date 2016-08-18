@@ -4,6 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I’m a front-end developer located in Orlando, FL, and have extensive knowledge in user experience. On top of that, I have years of design experience and was once nominated for a CSS Design Award. Currently, working at [Three21](http://three21creative.com).
+I’m a Ui developer located in Orlando, FL, and have extensive knowledge in user experience. On top of that, I have years of design experience and was once nominated for a CSS Design Award. Currently, working at [Three21](http://three21creative.com).
 
-![Dustin Delatore's glorious face]({{site.baseurl}}/images/img-dustin-delatore.jpeg)
+Created [Gnarlacious](http://gnarlacious.com), a showcase of side projects. Current side projects include but are not limited to:
+
+- [Name Game](http://name.gnarlacious.com) - A game naming generator
+- [Ionicss](https://github.com/gnarlacious/ionicss) - A mixin based Sass framework.
