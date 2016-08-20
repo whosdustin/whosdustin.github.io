@@ -10,3 +10,5 @@ Created [Gnarlacious](http://gnarlacious.com), a showcase of side projects. Curr
 
 - [Name Game](http://name.gnarlacious.com) - A game naming generator
 - [Ionicss](https://github.com/gnarlacious/ionicss) - A mixin based Sass framework.
+
+If you're interested, here is [my resume](/cv/).
