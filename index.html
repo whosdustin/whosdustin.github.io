@@ -13,15 +13,15 @@ layout: default
 
 {% for post in site.posts limit: 1 %}
 	{% assign cat = post.categories | join: '' | downcase %}
-	<div class="main__item card card__feature card__{{ cat }}">
+	<article class="main__item card card__feature card__{{ cat }}" itemscope itemtype="http://schema.org/BlogPosting">
 		<span class="card__subtitle">Latest Article</span>
-		<h2 class="card__title">{{ post.title }}</h2>
-		<span class="card__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-		<div class="card__content">
+		<h2 class="card__title" itemprop="name headline">{{ post.title }}</h2>
+		<time class="card__meta" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+		<div class="card__content" itemprop="articleBody">
 			{{ post.content | truncatehtml | truncatewords: 60 }}
 		</div>
 		<a class="button" href="{{ post.url | prepend: site.baseurl }}">Continue reading...</a>
-	</div>
+	</article>
 {% endfor %}
 
 <aside class="main__aside menu">
