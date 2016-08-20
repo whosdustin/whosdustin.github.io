@@ -1,0 +1,18 @@
+---
+layout: page
+title: Articles
+permalink: /articles/
+---
+
+{% for post in site.posts %}
+	{% assign cat = post.categories | join: ' ' %}
+		<a class="menu__item menu__link" href="{{ post.url | prepend: site.baseurl }}">
+			<h4 class="menu__title">{{ post.title }}</h4>
+			<span class="menu__meta">
+				<time  datetime="{{post.date}}">
+					{{ post.date | date: "%b %-d, %Y" }}
+				</time>
+				• <span>{{cat}}</span>
+			</span>
+		</a>
+{% endfor %}
