@@ -7,10 +7,12 @@
 	<nav class="masthead__nav">
 		<a class="masthead__navitem" href="{{ site.baseurl }}/">Home</a>
 		{% for page in site.pages %}
-			{% if page.title and page.title != 'Login' %}
-				<a class="masthead__navitem" href="{{ page.url | prepend: site.baseurl }}">
-					{{ page.title }}
-				</a>
+			{% if page.title %}
+				{% unless page.title == 'Login' or page.title == 'Resume' %}
+					<a class="masthead__navitem" href="{{ page.url | prepend: site.baseurl }}">
+						{{ page.title }}
+					</a>
+				{% endunless%}
 			{% endif %}
 		{% endfor %}
 	</nav>
