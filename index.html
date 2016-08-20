@@ -16,7 +16,21 @@ layout: default
 	<article class="main__item card card__feature card__{{ cat }}" itemscope itemtype="http://schema.org/BlogPosting">
 		<span class="card__subtitle">Latest Article</span>
 		<h2 class="card__title" itemprop="name headline">{{ post.title }}</h2>
-		<time class="card__meta" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+		<div class="card__meta">
+			<div>
+				<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+				{% if cat %}
+					• <span>{{cat | capitalize}}</span>
+				{% endif %}
+				{% capture words %}
+					{{ post.content | number_of_words | minus: 180 }}
+				{% endcapture %}
+				{% unless words contains '-' %}
+					• {{ words | plus: 180 | divided_by: 180 | append: ' min read' }}
+				{% endunless %}
+			</div>
+		</div>
+
 		<div class="card__content" itemprop="articleBody">
 			{{ post.content | truncatehtml | truncatewords: 60 }}
 		</div>
@@ -26,7 +40,7 @@ layout: default
 
 <aside class="main__aside menu">
 	<h3>Other Articles</h3>
-	{% for post in site.posts offset: 1  limit: 10 %}
+	{% for post in site.posts offset: 1  limit: 5 %}
 		{% assign cat = post.categories | join: ' ' %}
 			<a class="menu__item menu__link" href="{{ post.url | prepend: site.baseurl }}">
 				<h4 class="menu__title">{{ post.title }}</h4>
@@ -36,7 +50,6 @@ layout: default
 					</time>
 					• <span>{{cat}}</span>
 				</span>
-
 			</a>
 	{% endfor %}
 </aside>
