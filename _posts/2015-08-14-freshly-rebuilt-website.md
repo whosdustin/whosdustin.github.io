@@ -1,7 +1,8 @@
 ---
 title: Freshly Rebuilt Website
-date: 2015-08-14
-categories: "Show"
+date: 2015-08-14 00:00:00 Z
+categories:
+- Show
 ---
 
 Rebuilt my website after several years with a stagnant portfolio site. It was built fast and careless as my knowledge for development was that of a junior developer. I considered myself a’hybrid’ UI designer and front-end developer but focused more on design. The new site on the other hand is a reflection upon my career choice and passion for Front-end Development.

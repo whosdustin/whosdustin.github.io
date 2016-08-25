@@ -1,8 +1,10 @@
 ---
-title:  "Start With Why"
-date:   2016-01-10
-categories: "Watch"
+title: Start With Why
+date: 2016-01-10 00:00:00 Z
+categories:
+- Watch
 ---
+
 <div class="embed__container">
 	<iframe src="https://www.youtube.com/embed/u4ZoJKF_VuA" frameborder="0" allowfullscreen></iframe>
 </div>

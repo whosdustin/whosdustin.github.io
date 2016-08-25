@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Bridging the Designer/ Developer Gap
-date: 2016-03-03
-categories: Talk
+date: 2016-03-03 00:00:00 Z
+categories:
+- Talk
+layout: post
 ---
 
 <div class="embed__container">

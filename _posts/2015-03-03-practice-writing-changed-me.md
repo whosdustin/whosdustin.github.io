@@ -1,10 +1,12 @@
 ---
 title: 750 Words Helped Me
-date: '2015-03-03 09:30:00'
+date: 2015-03-03 09:30:00 Z
+categories:
+- TIL
 layout: post
-categories: TIL
 author: Dustin Delatore
 ---
+
 Earlier this year I started privately writing [750 words](http://750words.com/) every day. It didn't matter what words I typed, just that I was typing. Most of the time I write jibberish along with the occasional complaining. At first it seemed like the keyboard was my psychiatrist.
 
 Below is my favorite passage to date. The passage helped me realize the potential of annonymous writing daily. I felt the need to share.

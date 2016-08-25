@@ -1,8 +1,10 @@
 ---
-title: "Asset Naming Consistency"
-date: 2016-05-05
-categories: "Show"
+title: Asset Naming Consistency
+date: 2016-05-05 00:00:00 Z
+categories:
+- Show
 ---
+
 Finding image assets in a directory can be a pain in the ass. They tend to have crazy names and lack consistency using numbers, camel case, dashes, and underscores. There have been attempts at naming conventions that explain every detail of the image. Some files may state the size, the name, colors, and size (ex. Brand_Logo_White_240x240.png).
 
 The worst is if the name comes straight from a camera to the developer. Names from the camera mean nothing to a developer or even a designer for that matter. (ex. _DCMI039476301.jpg_). Who is this supposed to be helpful for besides possibly the photographer? With a proper/simple naming convention both designers and developers can work quickly and easily.
