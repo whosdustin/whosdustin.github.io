@@ -1,40 +1,37 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: Whos Dustin
-email: dustin@delatore.me
-description: Dustin is a Ui developer located in Orlando, FL, and have extensive knowledge in user experience. On top of that, I have years of design experience and was once nominated for a CSS Design Award. Currently, working at Three21.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://whosdustin.com" # the base hostname & protocol for your site
-twitter_username: whos_dustin
-github_username:  whosdustin
-dribbble_username: whosdustin
-
-gems:
-  - jekyll-sitemap
-  - jekyll-redirect-from
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      categories: ""
-      author: "Dustin Delatore"
-
+timezone: UTC
 collections:
-  talks:
+  posts:
+    title: Posts
     output: true
-    permalink: /talks/:path/
-
-permalink: /articles/:title/
+  talks:
+    title: Talks
+    output: true
+    permalink: "/talks/:path/"
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    categories: ''
+    author: Dustin Delatore
+email: dustin@delatore.me
+description: Dustin is a Ui developer located in Orlando, FL, and have extensive knowledge
+  in user experience. On top of that, I have years of design experience and was once
+  nominated for a CSS Design Award. Currently, working at Three21.
+baseurl: ''
+url: http://whosdustin.com
+twitter_username: whos_dustin
+github_username: whosdustin
+dribbble_username: whosdustin
+gems:
+- jekyll-sitemap
+- jekyll-redirect-from
+permalink: "/articles/:title/"
 highlighter: rouge
-# Build settings
 markdown: kramdown
