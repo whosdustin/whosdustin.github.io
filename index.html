@@ -13,12 +13,12 @@ layout: default
 
 {% for post in site.posts limit: 1 %}
 	{% assign cat = post.categories | join: '' | downcase %}
-	<article class="main__item card card__feature card__{{ cat }}" itemscope itemtype="http://schema.org/BlogPosting">
+	<article class="main__item card card__feature card__{{ cat }}">
 		<span class="card__subtitle">Latest Article</span>
-		<h2 class="card__title" itemprop="name headline">{{ post.title }}</h2>
+		<h2 class="card__title" >{{ post.title }}</h2>
 		<div class="card__meta">
 			<div>
-				<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 				{% if cat %}
 					• <span>{{cat | capitalize}}</span>
 				{% endif %}
@@ -31,7 +31,7 @@ layout: default
 			</div>
 		</div>
 
-		<div class="card__content" itemprop="articleBody">
+		<div class="card__content">
 			{{ post.content | truncatehtml | truncatewords: 60 }}
 		</div>
 		<a class="button" href="{{ post.url | prepend: site.baseurl }}">Continue reading...</a>
