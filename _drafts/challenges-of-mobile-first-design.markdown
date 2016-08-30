@@ -1,5 +1,5 @@
 ---
-title: Challenges of Mobile First
+title: Challenges of Mobile First Design
 date: 2016-08-30 02:04:00 Z
 categories:
 - POV
