@@ -7,6 +7,8 @@ tags:
 - design
 - ux
 - mobile
+- point of view
+- responsive
 ---
 
 - Recognize the difficulty with starting mobile first design.
