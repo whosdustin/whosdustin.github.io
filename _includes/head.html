@@ -6,6 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }} - {{site.title | escape}}{% else %}
 		{{ site.title | escape }} - Dustin Delatore a Ui Developer{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="keywords" content="{% if page.tags %}{{page.tags | join: ', '}}{% endif%}">
 
 	<!-- DNS Prefetch -->
 	 <link rel="dns-prefetch" href="//platform.twitter.com">
