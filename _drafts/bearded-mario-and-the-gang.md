@@ -3,6 +3,16 @@ title: Bearded Mario and the Gang
 date: 2016-08-16 00:00:00 Z
 categories:
 - Show
+tags:
+- mario
+- beard
+- luigi
+- princess
+- peach
+- donkey kong
+- toad
+- bowser
+- stickers
 author: Dustin Delatore
 layout: post
 ---

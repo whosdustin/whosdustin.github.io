@@ -3,6 +3,13 @@ title: Asset Naming Consistency
 date: 2016-05-05 00:00:00 Z
 categories:
 - Show
+tags:
+- image
+- naming
+- asset
+- management
+- consistency
+- convention
 ---
 
 Finding image assets in a directory can be a pain in the ass. They tend to have crazy names and lack consistency using numbers, camel case, dashes, and underscores. There have been attempts at naming conventions that explain every detail of the image. Some files may state the size, the name, colors, and size (ex. Brand_Logo_White_240x240.png).

@@ -3,8 +3,15 @@ title: 750 Words Helped Me
 date: 2015-03-03 09:30:00 Z
 categories:
 - TIL
-layout: post
+tags:
+- writing
+- self help
+- passion
+- thoughtful
+- digital nomad
+- travel
 author: Dustin Delatore
+layout: post
 ---
 
 Earlier this year I started privately writing [750 words](http://750words.com/) every day. It didn't matter what words I typed, just that I was typing. Most of the time I write jibberish along with the occasional complaining. At first it seemed like the keyboard was my psychiatrist.
