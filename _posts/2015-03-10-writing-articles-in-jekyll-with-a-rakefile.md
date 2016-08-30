@@ -3,6 +3,12 @@ title: Writing Articles in Jekyll with a Rakefile
 date: 2015-03-10 00:00:00 Z
 categories:
 - TIL
+tags:
+- jekyll
+- rake
+- ruby
+- articles
+- writing
 ---
 
 First, I will layout the entire Rakefile for those whom prefer to copy and paste the code into their solution. Then, I'll explain each section to those, like myself, whom have no idea what half of this code means.
