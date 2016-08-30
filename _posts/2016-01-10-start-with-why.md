@@ -3,6 +3,13 @@ title: Start With Why
 date: 2016-01-10 00:00:00 Z
 categories:
 - Watch
+tags:
+- culture
+- passion
+- startup
+- video
+- simon sinek
+- values
 ---
 
 <div class="embed__container">
