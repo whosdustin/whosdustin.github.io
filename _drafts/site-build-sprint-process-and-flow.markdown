@@ -1,5 +1,5 @@
 ---
-title: Design & Development Sprint Process
+title: Design & Development Sprint Flow
 date: 2016-08-30 02:29:00 Z
 categories:
 - POV
