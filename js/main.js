@@ -1,6 +1,6 @@
 // Remove double tap on ios for hover links
 if (!("ontouchstart" in document.documentElement)) {
-	document.documentElement.className += " no-touch";
+	document.documentElement.className += " no-touch ";
 }
 
 var listener = new window.keypress.Listener();
