@@ -21,6 +21,12 @@ defaults:
     categories: ''
     author: Dustin Delatore
     is_post: true
+- scope:
+    path: ''
+    type: page
+  values:
+    layout: page
+    description: ''
 email: dustin@delatore.me
 description: Dustin is a Ui developer located in Orlando, FL, and have extensive knowledge
   in user experience. On top of that, I have years of design experience and was once
