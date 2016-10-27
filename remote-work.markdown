@@ -1,6 +1,7 @@
 ---
 title: Remote Work
 date: 2016-10-27 17:36:00 Z
+layout: page
 ---
 
 A constantly growing list of websites to look for work remotely. 
