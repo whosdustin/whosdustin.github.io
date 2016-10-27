@@ -23,7 +23,7 @@ defaults:
     is_post: true
 - scope:
     path: ''
-    type: page
+    type: pages
   values:
     layout: page
     description: ''
