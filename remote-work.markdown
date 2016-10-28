@@ -3,6 +3,7 @@ title: Remote Work
 date: 2016-10-27 17:36:00 Z
 description: 'A constantly growing list of websites to look for work remotely. '
 layout: page
+redirect_to: https://whosdustin.com/resources/nomad/remote-work/
 ---
 
 A constantly growing list of websites to look for work remotely. 
