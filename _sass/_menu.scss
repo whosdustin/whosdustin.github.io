@@ -1,5 +1,8 @@
 .menu {
-	padding: 0 2em;
+	padding: 0 4%;
+	@media (min-width: 640px) {
+		padding: 0 2em;
+	}
 }
 
 .menu__item {
