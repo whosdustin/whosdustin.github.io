@@ -3,8 +3,8 @@ title: Whos Dustin
 timezone: UTC
 collections:
   calendar:
-    title: Calendar
-    output: true
+    title: Events
+    output: false
   posts:
     title: Posts
     output: true
