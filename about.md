@@ -4,9 +4,13 @@ permalink: "/about/"
 layout: page
 ---
 
-I’m a Ui developer located in Orlando, FL, and have extensive knowledge in user experience. On top of that, I have years of design experience and was once nominated for a [CSS Design Award](http://www.cssdesignawards.com/sites/whos-dustin/21950/). Currently, working at [Three21](http://three21creative.com).
+Dustin is a ui developer, part-time starving artist, amateur traveler, and an undeniably talented doodler. Though Dustin stares at lines of code daily, he appreciates the beauty and prosperity design provides the world.
 
-Created [Gnarlacious](http://gnarlacious.com), a showcase of side projects. Current side projects include but are not limited to:
+Previous to being a developer, Dustin had years of design experience under his proverbial belt. 
+
+Once nominated for a [CSS Design Award](http://www.cssdesignawards.com/sites/whos-dustin/21950/). 
+
+Created [Gnarlacious](http://shop.gnarlacious.com), a showcase of side projects. Current side projects include but are not limited to:
 
 - [Orlando Designers Slack](https://orlandodesigners.info/) A website to display events and Slack Invitations.
 - [Resources](https://whosdustin.com/resources/) - A site full of inspiring and useful links that I have aggregated over the years.
