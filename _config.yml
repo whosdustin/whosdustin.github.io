@@ -39,12 +39,13 @@ defaults:
     image: ''
     weight: 0.0
 email: dustin@delatore.me
-description: Dustin is a Ui developer located in Orlando, FL, and have extensive knowledge
-  in user experience. On top of that, I have years of design experience and was once
-  nominated for a CSS Design Award. Currently, working at Three21.
+description: 'Dustin is a ui developer, part-time starving artist, amateur traveler,
+and an undeniably talented doodler. Though Dustin stares at lines of code daily,
+he appreciates the beauty and prosperity design provides the world.
+
+'
 baseurl: ''
 url: http://whosdustin.com
-snipcart_api_key: MDJlNzZmMDktZjAyNC00NjQ0LTk3ZjEtYTlkYWZhNTM2NmNmNjM2MTQxNjQzMjE3NTEwMzY3
 twitter_username: whos_dustin
 github_username: whosdustin
 dribbble_username: whosdustin

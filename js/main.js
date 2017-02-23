@@ -3,11 +3,20 @@ if (!("ontouchstart" in document.documentElement)) {
 	document.documentElement.className += " no-touch ";
 }
 
-var listener = new window.keypress.Listener();
-listener.sequence_combo('m a r i o', function() {
-	document.body.innerHTML += '<div id="marioPath" class="mario__path"><img id="mario" class="mario" src="/images/img-mario-running.gif" /></div>';
-	var marioWait = setTimeout(function() {
-		var mario = document.getElementById('marioPath');
-		document.body.removeChild(mario);
-	}, 5000);
-}, true);
+(function(){
+	var listener = new window.keypress.Listener();
+	listener.sequence_combo('m a r i o', function() {
+		var d = document,
+				marioPath = d.createElement('div'),
+				marioImg = d.createElement('img'),
+				marioWait;
+			marioPath.className = 'mario_path';
+			marioImg.className = 'mario';
+			marioImg.src = '/images/img-mario-running.gif';
+			marioPath.appendChild(marioImg);
+		d.body.appendChild(marioPath);
+		marioWait = setTimeout(function() {
+			d.body.removeChild(marioPath);
+		}, 5000);
+	}, true);
+})();
