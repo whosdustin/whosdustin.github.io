@@ -5,7 +5,7 @@ categories:
 - TIL
 tags:
 - flexbox
-- front-end
+- frontend
 - ui
 - development
 - responsive

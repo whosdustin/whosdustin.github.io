@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Dustin Delatore",
-    "label": "Front-end Developer",
+    "label": "Frontend Developer",
     "picture": "",
     "email": "dustin@delatore.me",
     "phone": "603.767.0614",
     "website": "http://whosdustin.com",
-    "summary": "Over 12 years of web design and 8 years front-end development experience. All of my attention was focused on creating the best user experience possible. Highly motivated, hard working and an ambitious leader prepared for any challenges that confront me.",
+    "summary": "Over 12 years of web design and 8 years frontend development experience. All of my attention was focused on creating the best user experience possible. Highly motivated, hard working and an ambitious leader prepared for any challenges that confront me.",
     "location": {
       "address": "111 E. Washington St.",
       "postalCode": "FL 32801",
@@ -30,12 +30,12 @@
   "work": [
     {
       "company": "Bisk Education",
-      "position": "Lead Front-end Developer",
+      "position": "Lead Frontend Developer",
       "website": "http://bisk.com",
       "startDate": "2014-05-01",
-      "summary": "Worked on the Bisk Learning Management System (LMS), built on C# MVC using Sass and jQuery. Supported a team in converting the LMS to a fully responsive application. Optimized the front-end of the LMS with thorough research and documentation of development standards. Also, part of the first mobile development team to create Bisk's first mobile application. Later, moved up to the UX team assisting in research and developement of all technology both internal and external.",
+      "summary": "Worked on the Bisk Learning Management System (LMS), built on C# MVC using Sass and jQuery. Supported a team in converting the LMS to a fully responsive application. Optimized the frontend of the LMS with thorough research and documentation of development standards. Also, part of the first mobile development team to create Bisk's first mobile application. Later, moved up to the UX team assisting in research and developement of all technology both internal and external.",
       "highlights": [
-        "Wrote a front-end development standards documentation",
+        "Wrote a frontend development standards documentation",
         "Converted an application to responsive design",
         "Optimized CSS for scalabilty and performance using SMACSS framework",
         "Developed a mobile app for iOS and Android using Titanium",
@@ -44,7 +44,7 @@
     },
     {
       "company": "LilyPad Solutions",
-      "position": "Designer/Front-end Developer",
+      "position": "Designer/Frontend Developer",
       "website": "http://lilypad.co",
       "startDate": "2011-07-01",
       "endDate": "2014-05-01",
@@ -58,7 +58,7 @@
     },
     {
       "company": "Actsoft",
-      "position": "Designer/Front-end Developer",
+      "position": "Designer/Frontend Developer",
       "website": "http://actsoft.com",
       "startDate": "2009-01-01",
       "endDate": "2013-02-01",
@@ -95,7 +95,7 @@
   "publications": [],
   "skills": [
     {
-      "name": "Front-end",
+      "name": "Frontend",
       "level": "Sr-level",
       "keywords": [
         "HTML5",

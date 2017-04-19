@@ -52,6 +52,7 @@ dribbble_username: whosdustin
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
+- jemoji
 permalink: "/articles/:title/"
 highlighter: rouge
 markdown: kramdown

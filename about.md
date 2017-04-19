@@ -4,27 +4,39 @@ permalink: "/about/"
 description: Dustin is a ui developer, part-time starving artist, amateur traveler,
   and an undeniably talented doodler. Though Dustin stares at lines of code daily,
   he appreciates the beauty and prosperity design provides the world.
+status: World Traveler
+location: Ubud, Bali
 layout: page
 ---
 
-**Current Status:** *World Traveler*
+I'm a frontend developer, designer, part-time starving artist, amateur traveler, and an undeniably talented doodler. Though I stare at lines of code daily, I appreciate the beauty and prosperity design can provide the world.
 
-Dustin is a ui developer, part-time starving artist, amateur traveler, and an undeniably talented doodler. Though Dustin stares at lines of code daily, he appreciates the beauty and prosperity design provides the world.
+In my spare time I work on some fun and sometimes meaningful projects. Those projects are [4Benefit News](http://4benefitnews.com), [Gnarlacious](http://shop.gnarlacious.com), [Orlando Designers](https://orlandodesigners.info/), [Personal Resources](https://whosdustin.com/resources/), [The Game Namer](http://name.gnarlacious.com), and many more.
 
-Previous to being a developer, Dustin had years of design experience under his proverbial belt.
+---
 
-Once nominated for a [CSS Design Award](http://www.cssdesignawards.com/sites/whos-dustin/21950/).
+### My Latest Work
 
-Created [Gnarlacious](http://shop.gnarlacious.com), a showcase of side projects. Current side projects include but are not limited to:
+[Feel Good Bali](https://feelgoodbali.com)
 
-* [Orlando Designers Slack](https://orlandodesigners.info/) A website to display events and Slack Invitations.
+An eCommerce site selling pajamas with a purpose. Built on Shopify.
 
-* [Resources](https://whosdustin.com/resources/) - A site full of inspiring and useful links that I have aggregated over the years.
+[Open SourceCraft](http://codepop.com/open-sourcecraft)
 
-* [Middleman Data](https://github.com/gnarlacious/middleman-data) - A prototype template with user data
+A podcast about Open Source Software. Built using Jekyll CMS attached to Siteleaf for content editing.
 
-* [Name Game](http://name.gnarlacious.com) - A game naming generator
+[Space Coast Launches](https://spacecoastlaunches.com)
 
-* [Ionicss](https://github.com/gnarlacious/ionicss) - A mixin based Sass framework.
+A space aged parallax countdown timer for Florida based rocket launches. Built on Wordpress.
 
-If you're interested, here is [my resume](/cv/).
+[Bisk](https://bisk.com)
+
+A learning management system for higher education and corporate learning. Built in Jekyll CMS.
+
+---
+
+### Get In Touch
+
+If you want to chat feel free to send me an [email](mailto:dustin@delatore.me) or message me on [Twitter](https://twitter.com/whos_dustin). You can also find me on [Github](https://github.com/whosdustin), [Dribbble](https://dribbble.com/whosdustin), [Instagram](https://instagram.com/whos.dustin), and [Linkedin](https://www.linkedin.com/in/whosdustin/).
+
+Recruiters, if you got this far, here is [my resume](/cv/).

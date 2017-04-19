@@ -2,11 +2,33 @@
 layout: default
 ---
 
+<article class="main__item card card__feature">
+	<span class="card_subtitle">Hi :wave:, my name is</span>
+	<h2 class="card__title">Dustin Delatore</h2>
+	{% for page in site.pages %}
+		{% if page.title == 'About' %}
+			<div class="card__meta">
+				<div>
+					<span><b>Current Status:</b> {{ page.status }}</span>
+					•
+					<span><b>Living in:</b> {{ page.location }}</span>
+				</div>
+			</div>
+			<div class="card__content">
+				{{page.content}}
+			</div>
+		{% endif %}
+	{% endfor %}
+</article>
+
+
+{% comment %}
 <div class="bio" itemscope itemtype="https://schema.org/Person">
 	<div class="bio__content">
 		<h1 class="bio__title"><span itemprop="givenName">Dustin</span> is a <span itemprop="jobTitle">Ui&nbsp;Developer</span>.</h1>
 	</div>
 </div>
+
 
 {% for post in site.posts limit: 1 %}
 	{% assign cat = post.categories | join: '' | downcase %}
@@ -62,3 +84,4 @@ layout: default
 
 	{% endfor %}
 </aside>
+{% endcomment %}
