@@ -5,7 +5,7 @@ description: Dustin is a ui developer, part-time starving artist, amateur travel
   and an undeniably talented doodler. Though Dustin stares at lines of code daily,
   he appreciates the beauty and prosperity design provides the world.
 status: World Traveler
-location: Ubud, Bali
+location: Kuala Lumpur
 layout: page
 ---
 
