@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-date: 2017-06-28
+date: 2017-06-28 00:00:00 Z
 categories:
 - Legal
 layout: post
