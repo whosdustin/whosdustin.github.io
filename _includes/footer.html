@@ -1,25 +1,36 @@
-<footer class="main__container footer" role="contentinfo">
-	<nav>
-		{% if site.github_username %}
-			<a class="footer__navitem" href="https://github.com/{{ site.github_username }}" >
-				Github
+<footer class="footer" role="contentinfo">
+	<section>
+		<h4>Find Me Here Links</h4>
+		<nav class="footer-nav">
+			{% if site.github_username %}
+				<a class="nav-item" href="https://github.com/{{ site.github_username }}" >
+					Github
+				</a>
+				•
+			{% endif %}
+			{% if site.twitter_username %}
+				<a class="nav-item" href="https://twitter.com/{{ site.twitter_username }}">
+					Twitter
+				</a>
+				•
+			{% endif %}
+			{% if site.dribbble_username %}
+				<a class="nav-item" href="http://dribbble.com/{{ site.dribbble_username }}" >
+					Dribbble
+				</a>
+				•
+			{% endif %}
+			<a class="nav-item" href="{{ "/feed.xml" | prepend: site.baseurl }}" >
+				RSS
 			</a>
-			•
-		{% endif %}
-		{% if site.twitter_username %}
-			<a class="footer__navitem" href="https://twitter.com/{{ site.twitter_username }}">
-				Twitter
-			</a>
-			•
-		{% endif %}
-		{% if site.dribbble_username %}
-			<a class="footer__navitem" href="http://dribbble.com/{{ site.dribbble_username }}" >
-				Dribbble
-			</a>
-			•
-		{% endif %}
-		<a class="footer__navitem" href="{{ "/feed.xml" | prepend: site.baseurl }}" >
-			RSS
-		</a>
-	</nav>
+		</nav>
+	</section>
+	<section>
+		<h4>Legal Stuff To Seem Legit</h4>
+		<p>Copyright &copy; 2017 Dustin Delatore All Rights Reserved.</p>
+		<nav class="footer-nav">
+			<a class="nav-item" href="/privacy">Privacy Policy</a>
+			• <a class="nav-item" href="/terms">Terms &amp; Conditions</a>
+		</nav>
+	</section>
 </footer>

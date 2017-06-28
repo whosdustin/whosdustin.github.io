@@ -2,16 +2,18 @@
 layout: default
 ---
 
-<article class="main__item card card__feature">
-	<span class="card_subtitle">Hi, my name is</span>
-	<h2 class="card__title">Dustin Delatore</h2>
+<section class="billboard">
+	<span class="pretitle">Hello, I am</span>
+	<h1 class="title">Dustin Delatore</h1>
+</section>
+
+<article class="main article">
 	{% for page in site.pages %}
 		{% if page.title == 'About' %}
-			<div class="card__meta">
+			<div class="meta">
 				<div>
 					<span><b>Current Status:</b> {{ page.status }}</span>
-					•
-					<span><b>Living in:</b> <a href="#where-in-the-world">{{ page.location }}</a></span>
+					•<span><b>Living in:</b> <a href="#where-in-the-world">{{ page.location }}</a></span>
 				</div>
 			</div>
 			<div class="card__content">
@@ -20,68 +22,3 @@ layout: default
 		{% endif %}
 	{% endfor %}
 </article>
-
-
-{% comment %}
-<div class="bio" itemscope itemtype="https://schema.org/Person">
-	<div class="bio__content">
-		<h1 class="bio__title"><span itemprop="givenName">Dustin</span> is a <span itemprop="jobTitle">Ui&nbsp;Developer</span>.</h1>
-	</div>
-</div>
-
-
-{% for post in site.posts limit: 1 %}
-	{% assign cat = post.categories | join: '' | downcase %}
-	<article class="main__item card card__feature card__{{ cat }}">
-		<span class="card__subtitle">Latest Article</span>
-		<h2 id="featureTitle" class="card__title" >{{ post.title }}</h2>
-		<div class="card__meta">
-			<div>
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
-				<!-- {% if cat %}
-					• <span>{{cat | capitalize}}</span>
-				{% endif %} -->
-				{% capture words %}
-					{{ post.content | number_of_words | minus: 180 }}
-				{% endcapture %}
-				{% unless words contains '-' %}
-					• {{ words | plus: 180 | divided_by: 180 | append: ' min read' }}
-				{% endunless %}
-			</div>
-		</div>
-
-		<div class="card__content">
-			{{ post.content | truncatehtml | truncatewords: 60 }}
-		</div>
-		<a class="button" href="{{ post.url | prepend: site.baseurl }}">Continue reading...</a>
-	</article>
-{% endfor %}
-
-<aside class="main__aside menu">
-	<h3>Other Articles</h3>
-	{% for post in site.posts offset: 1  limit: 5 %}
-		{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-		{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-
-		{% if forloop.first %}
-			<span class="menu__year">{{this_year}}</span>
-		{% endif %}
-
-		<a class="menu__item menu__link" href="{{ post.url | prepend: site.baseurl }}">
-			<span class="menu__meta">
-				<time  datetime="{{post.date}}">
-					{{ post.date | date: "%b %-d" }}
-				</time>
-			</span>
-			<h4 class="menu__title">{{ post.title }}</h4>
-		</a>
-
-		{% unless forloop.last %}
-			{% if this_year != next_year %}
-			<span class="menu__year">{{next_year}}</span>
-			{% endif %}
-		{% endunless %}
-
-	{% endfor %}
-</aside>
-{% endcomment %}

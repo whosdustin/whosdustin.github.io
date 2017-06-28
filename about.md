@@ -45,4 +45,6 @@ Recruiters, if you got this far, here is [my resume](/cv/).
 
 If you want to keep track of my travels. Here's a pretty sweet map of that.
 
+<!--
 <iframe width="560" height="315" style="background:#f9f9f9;" src="https://nomadlist.com/whos_dustin/embed?date_start=2016-01-16&date_end=2017-05-10" scrolling="no" frameborder="0" allowfullscreen></iframe>
+-->

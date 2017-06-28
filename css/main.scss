@@ -4,7 +4,9 @@
 @charset "utf-8";
 
 @import 'normalize';
+@import 'modularscale';
 @import 'variables';
+
 
 @import 'base';
 @import 'typography';
@@ -13,11 +15,12 @@
 
 // Components
 @import 'masthead';
-@import 'bio';
+@import 'billboard';
 @import 'card';
 @import 'menu';
 @import 'buttons';
 @import 'embeds';
+@import 'meta';
 @import 'footer';
 
 @import 'utils';

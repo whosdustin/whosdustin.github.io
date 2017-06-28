@@ -1,0 +1,14 @@
+.meta {
+  display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-bottom: 1em;
+	font-style: italic;
+  color: #999;
+	font-size: 0.9em;
+	@media (min-width: 400px) {
+		flex-flow: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+}

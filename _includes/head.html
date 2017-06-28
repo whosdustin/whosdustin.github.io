@@ -12,6 +12,8 @@
 	 <link rel="dns-prefetch" href="//platform.twitter.com">
 	 <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico">
 	<!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Neuton:300|Work+Sans:400,700" rel="stylesheet">
+
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -24,6 +26,6 @@
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  
+
 	{% include analytics.html %}
 </head>

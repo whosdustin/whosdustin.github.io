@@ -1,50 +1,27 @@
 .footer {
 	position: relative;
 	padding: 2em;
-	font-family: $font-family-secondary;
+	margin-top: 2em;
+	background: $brand-color-secondary;
+	font-family: $font-family-sans;
 	font-size: 0.8em;
-	color: #999;
-	&::after,
+
 	&::before {
 		position: absolute;
 		background: $font-color-base;
 		content: '';
-	}
-	&::before {
-		top: 0;
-		height: 2px;
-		left: 10%;
-		right: 10%;
-	}
-	&::after {
-		top: 8px;
-		height: 1px;
-		left: 20%;
-		right: 20%;
+		top: 10px;
+		height: 10px;
+		left: 2%;
+		right: 2%;
 	}
 }
 
-.footer__navitem {
-	position: relative;
-	text-decoration: none;
-	font-weight: normal;
-	color: #999;
-	&::after {
-		position: absolute;
-		left: 50%;
-		bottom: -2px;
-		width: 0;
-		height: 2px;
-		background: $font-color-base;
-		content: '';
-		transition: all 0.2s;
-	}
-	&:hover {
-		color: $font-color-base;
+.footer-nav {
+	> .nav-item {
+		font-weight: 400;
 		&::after {
-			left: 0;
-			right: 0;
-			width: 100%;
+			background: none;
 		}
 	}
 }
