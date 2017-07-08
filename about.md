@@ -1,9 +1,9 @@
 ---
 title: About
 permalink: "/about/"
-description: Dustin is a ui developer, part-time starving artist, amateur traveler,
-  and an undeniably talented doodler. Though Dustin stares at lines of code daily,
-  he appreciates the beauty and prosperity design provides the world.
+description: Dustin is a designer, developer, entrepreneur, amateur traveler, and
+  an undeniably talented doodler. Though Dustin stares at lines of code daily, he
+  appreciates the beauty and prosperity design provides the world.
 status: World Traveler
 location: Budapest
 layout: page
