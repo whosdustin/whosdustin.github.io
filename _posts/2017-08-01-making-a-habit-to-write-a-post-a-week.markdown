@@ -16,7 +16,7 @@ To start, I will first create a habit of writing. I've downloaded this app calle
 
 During my journal writing exercises, my writing has been me airing out grievances, contemplating the future, and just about anything that instantly pops into my head. I haven't been able to extract any value out of content I write, which brings me to my next point.
 
-## I plan to provided value
+## I plan to provide value
 
 By writing weekly I'll be able to form a consistent voice.  With my new found voice, I hope to provide valuable content for those who find themselves reading my posts. My challenge will begin with writing consistently merged with writing on topics that matter to more than just myself. In the end, my intention is to empower myself by strengthening my writing abilities and escape the fear that my words are meaningless.
 
