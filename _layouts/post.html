@@ -18,7 +18,7 @@ layout: default
 			<time datetime="{{ page.date | date_to_xmlschema }}">
 				<b>{{ page.date | date: "%b %-d, %Y" }}</b>
 			</time>
-			{% if cat %}
+			{% if cat.size > 0 %}
 				•<span>{{cat}}</span>
 			{% endif %}
 			{% capture words %}
