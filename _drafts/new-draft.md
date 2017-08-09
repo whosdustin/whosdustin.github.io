@@ -13,6 +13,8 @@ author: Dustin Delatore
 layout: post
 ---
 
-## Why
-## How
-## What
+> The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown
+>
+> <cite>– H.P. Lovecraft [^1]</cite>
+
+[^1]: H.P. Lovecraft, Supernatural Horror in Literature

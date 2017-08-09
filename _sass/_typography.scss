@@ -26,4 +26,14 @@ blockquote {
     content: '\275D';
     z-index: -1;
   }
+  > p {
+    display: block;
+    margin: 0;
+  }
+
+  cite {
+    display: block;
+    font-size: 0.7em;
+    text-align: right;
+  }
 }
