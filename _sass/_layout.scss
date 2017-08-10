@@ -27,7 +27,8 @@
 			}
 			@media (min-width: 800px) {
 				width: percentage(1/3);
-				&:first-of-type {
+				&:first-of-type,
+				&:nth-of-type(5n+6) {
 					width: percentage(2/3);
 				}
 			}
