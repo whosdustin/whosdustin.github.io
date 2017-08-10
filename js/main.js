@@ -1,69 +1,68 @@
 // Remove double tap on ios for hover links
 if (!("ontouchstart" in document.documentElement)) {
-	document.documentElement.className += " no-touch ";
+  document.documentElement.className += " no-touch ";
 }
 
-(function(){
+(function() {
 
-	// Mario sequence
-	var listener = new window.keypress.Listener();
-	listener.sequence_combo('m a r i o', function() {
-		var d = document,
-				marioPath = d.createElement('div'),
-				marioImg = d.createElement('img'),
-				marioWait;
-			marioPath.className = 'mario_path';
-			marioImg.className = 'mario';
-			marioImg.src = '/images/img-mario-running.gif';
-			marioPath.appendChild(marioImg);
-		d.body.appendChild(marioPath);
-		marioWait = setTimeout(function() {
-			d.body.removeChild(marioPath);
-		}, 5000);
-	}, true);
+  // Mario sequence
+  var listener = new window.keypress.Listener();
+  listener.sequence_combo('m a r i o', function() {
+    var d = document,
+      marioPath = d.createElement('div'),
+      marioImg = d.createElement('img'),
+      marioWait;
+    marioPath.className = 'mario_path';
+    marioImg.className = 'mario';
+    marioImg.src = '/images/img-mario-running.gif';
+    marioPath.appendChild(marioImg);
+    d.body.appendChild(marioPath);
+    marioWait = setTimeout(function() {
+      d.body.removeChild(marioPath);
+    }, 5000);
+  }, true);
 
-	function load(json) {
+  function loadNomad(json) {
     loadJSON(json, function(response) {
       var data = JSON.parse(response);
-			var city = data.location.now.city,
-					country = data.location.now.country,
-					anchor = document.getElementById("current_location");
+      var city = data.location.now.city,
+        country = data.location.now.country,
+        anchor = document.getElementById("current_location");
 
-			anchor.innerHTML = city + ", " + country;
+      anchor.innerHTML = city + ", " + country;
     });
   }
 
-	load("https://nomadlist.com/@whos_dustin.json");
+  loadNomad("https://nomadlist.com/@whos_dustin.json");
 
+  // Private
 
-	// Private
-
-	function loadJSON(file, callback) {
-		var xobj = new XMLHttpRequest();
+  function loadJSON(file, callback) {
+    var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
+    xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
-      	// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-      	callback(xobj.responseText);
+        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+        callback(xobj.responseText);
       }
     };
     xobj.send(null);
- }
+  }
 
 })();
 
-(function(){
-	// Define the constructor
+(function() {
+  // Define the constructor
   this.Nav = function() {
 
     this.nav = document.getElementById('nav_header');
     this.navtrigger = null;
 
     var defaults = {
-      className : 'drop-down',
-      menuText  : 'Menu',
-      closeText : 'Close'
+      className: 'drop-down',
+      menuText: 'Menu',
+      closeText: 'Close'
     }
 
     // Create options by extending defaults with the passed in arugments
@@ -79,13 +78,13 @@ if (!("ontouchstart" in document.documentElement)) {
   // Public Methods
   //=====================
 
-
   Nav.prototype.trigger = function() {
-    var navTrigger, $this = this;
+    var navTrigger,
+      $this = this;
 
     navTrigger = document.querySelectorAll('[data-nav]');
 
-    for (var i=0; i<navTrigger.length; i++) {
+    for (var i = 0; i < navTrigger.length; i++) {
       navTrigger[i].addEventListener('click', function() {
         $this.nav = document.getElementById(this.dataset.nav);
         $this.navtrigger = this;
@@ -111,8 +110,8 @@ if (!("ontouchstart" in document.documentElement)) {
   // Utility method to extend defaults with user options
   function extendDefaults(source, properties) {
     var property;
-    for(property in properties) {
-      if(properties.hasOwnProperty(property)) {
+    for (property in properties) {
+      if (properties.hasOwnProperty(property)) {
         source[property] = properties[property];
       }
     }
@@ -120,7 +119,9 @@ if (!("ontouchstart" in document.documentElement)) {
   }
 
   function toggleText(elem, newText) {
-    var textnode, whitespace, i;
+    var textnode,
+      whitespace,
+      i;
 
     // Iterate through contents in trigger
     // Find the only content that is text and switch to close text
@@ -143,7 +144,7 @@ if (!("ontouchstart" in document.documentElement)) {
     }
 
     if (!this.nav.classList.contains('-is-open')) {
-      this.nav.className = this.nav.className + ' -is-open ' +  '_' + this.options.className;
+      this.nav.className = this.nav.className + ' -is-open ' + '_' + this.options.className;
     } else {
       this.nav.className = this.nav.className.replace(' -is-open ', '');
       this.nav.className = this.nav.className.replace('_' + this.options.className, '');
