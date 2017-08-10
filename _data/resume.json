@@ -5,7 +5,7 @@
     "picture": "",
     "email": "dustin@delatore.me",
     "phone": "603.767.0614",
-    "website": "http://whosdustin.com",
+    "website": "https://whosdustin.com",
     "summary": "Over 12 years of web design and 8 years frontend development experience. All of my attention was focused on creating the best user experience possible. Highly motivated, hard working and an ambitious leader prepared for any challenges that confront me.",
     "location": {
       "address": "111 E. Washington St.",
@@ -111,6 +111,7 @@
         "jQuery",
         "Bootstrap",
         "BEM",
+        "RSCSS",
         "SMACSS"
       ]
     },
@@ -119,7 +120,8 @@
       "level": "Mid-level",
       "keywords": [
         "Node.js",
-        "Ruby"
+        "Ruby",
+        "Rails"
       ]
     },
     {
@@ -135,16 +137,15 @@
       "name": "Database",
       "level": "Jr-level",
       "keywords": [
-        "MongoDB",
-        "MySQL",
+        "Posgresql"
       ]
     },
     {
       "name": "Project Management",
       "level": "Sr-level",
       "keywords": [
-        "TFS",
         "Trello",
+        "Asana",
         "Agile"
       ]
     }
