@@ -23,7 +23,7 @@ I'm not trying to discredit fear completely, but wish to establish a basis for w
 
 While traveling abroad, I'm forced to confront my fear of the unknown. Through conquering my fears though I encounter a notable change in how I perceive life. Overall, I attribute most of my inspiring experiences with having the strength to overcome my fear of the unknown.
 
-## Embrace the unknown.
+## Embrace the unknown
 
 To start, in February I had a nervous breakdown packing for my trip. After years of planning and remembering my excitement levels reaching extraordinary heights I was still left in near tears once the time arrived. Looking at an empty room and a floor full of clothes I couldn't help but worry. The tickets were booked, the journey was beginning, yet I sat there with many questions still unanswered. What was I leaving behind? Financially, will I survive abroad and when I return? What can I expect out there?
 
@@ -35,7 +35,7 @@ After submitting to my inhibitions to control the situation I came upon an odd f
 
 I ventured to not coordinate any future destinations without consulting friends at my current location. Trusting in people and their recommendations, I was able to see areas I had no intentions of visiting. Looking back, almost all the places I've stayed weren't on my original list.  Another major component that helped set me at ease was the technology of today. My trip would have been more difficult if it weren't for the major applications Facebook Groups, Messenger, Google Maps (offline), and Google Translate (offline). 
 
-## Take one step at a time.
+## Take one step at a time
 
 Though the fear still resides within me I now ignore it and embrace what's coming next. There have been several times where nearly everything has gone wrong. Instead of worrying I act on one problem at a time.
 
@@ -43,7 +43,7 @@ Unbeknownst to me, some random event occurs and typically gets me to my next ste
 
 Taking that first step gets you closer to where you need to go. We may think in leaps and bounds but we can only act one step at a time. Your fear is in the leap. Ignoring the leap and looking down you have a smaller chance of falling. 
 
-A great book I read, was by Seth Godin, <a target="_blank" href="https://www.amazon.com/gp/offer-listing/1591848253/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1591848253&linkCode=am2&tag=4benefitnews-20&linkId=82632eedd18bf0cd9df84ac0a0166c50">Poke the Box, by Seth Godin.</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=4benefitnews-20&l=am2&o=1&a=1591848253" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. The book dives into conquering the fears of starting a business but can be understood on a much larger scale.
+A great book I read, was by Seth Godin, <a target="_blank" href="https://www.amazon.com/gp/offer-listing/1591848253/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1591848253&linkCode=am2&tag=4benefitnews-20&linkId=82632eedd18bf0cd9df84ac0a0166c50">Poke the Box</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=4benefitnews-20&l=am2&o=1&a=1591848253" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. The book dives into conquering the fears of starting a business but can be understood on a much larger scale.
 
 Finally, I want to leave a quote that resonates with me:
 
