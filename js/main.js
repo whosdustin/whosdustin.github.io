@@ -4,6 +4,8 @@ if (!("ontouchstart" in document.documentElement)) {
 }
 
 (function(){
+
+	// Mario sequence
 	var listener = new window.keypress.Listener();
 	listener.sequence_combo('m a r i o', function() {
 		var d = document,
@@ -19,6 +21,36 @@ if (!("ontouchstart" in document.documentElement)) {
 			d.body.removeChild(marioPath);
 		}, 5000);
 	}, true);
+
+	function load(json) {
+    loadJSON(json, function(response) {
+      var data = JSON.parse(response);
+			var city = data.location.now.city,
+					country = data.location.now.country,
+					anchor = document.getElementById("current_location");
+
+			anchor.innerHTML = city + ", " + country;
+    });
+  }
+
+	load("https://nomadlist.com/@whos_dustin.json");
+
+
+	// Private
+
+	function loadJSON(file, callback) {
+		var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+      if (xobj.readyState == 4 && xobj.status == "200") {
+      	// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+      	callback(xobj.responseText);
+      }
+    };
+    xobj.send(null);
+ }
+
 })();
 
 (function(){
