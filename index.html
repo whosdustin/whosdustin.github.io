@@ -24,7 +24,23 @@ layout: default
 
 	<hr>
 
-	<h3>My Latest Work</h3>
+	<h3>Recent Article</h3>
+	{% for post in site.posts limit: 1 %}
+	<a class="card" href="{{ post.url | prepend: site.baseurl }}">
+		<div class="content">
+			<h2 class="title">{{ post.title }}</h2>
+			<span class="meta">
+				<time  datetime="{{post.date | date_to_xmlschema}}">
+					{{ post.date | date: "%b %-d, %Y" }}
+				</time>
+			</span>
+		</div>
+	</a>
+	{% endfor %}
+
+	<hr>
+
+	<h3>Latest Work</h3>
 	{% for work in site.work %}
 		<a href="{{work.link}}" target="_blank" rel="nofollow">{{work.title}}</a>
 		<p>{{work.content}}</p>
