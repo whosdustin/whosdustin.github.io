@@ -21,4 +21,28 @@ layout: default
 			</div>
 		{% endif %}
 	{% endfor %}
+
+	<hr>
+
+	<h3>My Latest Work</h3>
+	{% for work in site.work %}
+		<a href="{{work.link}}" target="_blank" rel="nofollow">{{work.title}}</a>
+		<p>{{work.content}}</p>
+	{% endfor %}
+
+	<hr>
+
+	<h3>Get In Touch</h3>
+	<p>If you want to chat feel free to send me an <a href="mailto:dustin@delatore.me">email</a> or message me on <a href="https://twitter.com/whos_dustin" target="_blank">Twitter</a>. You can also find me on <a href="https://github.com/whosdustin" target="_blank">Github</a>, <a href="https://dribbble.com/whosdustin" target="_blank">Dribbble</a>, <a href="https://instagram.com/whos.dustin" target="_blank">Instagram</a>, and <a href="https://www.linkedin.com/in/whosdustin" target="_blank">Linkedin</a>.</p>
+
+	<p>Recruiters, if you got this far, here is <a href="/cv/">my resumé</a>.</p>
+
+	<hr>
+
+	<h3 id="where-in-the-world">Where In The World</h3>
+
+	<p>If you want to keep track of my travels. Here's a pretty sweet map of that.</p>
+
+	<iframe width="560" height="315" style="background:#f9f9f9;" src="https://nomadlist.com/whos_dustin/embed?date_start=2016-01-16&date_end=2017-05-10" scrolling="no" frameborder="0" allowfullscreen></iframe>
+
 </article>

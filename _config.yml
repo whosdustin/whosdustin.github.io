@@ -32,6 +32,11 @@ defaults:
     description: ''
 - scope:
     path: ''
+    type: work
+  values:
+    link: ''
+- scope:
+    path: ''
     type: products
   values:
     layout: product
