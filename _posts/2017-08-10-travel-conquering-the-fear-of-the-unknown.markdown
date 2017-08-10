@@ -2,7 +2,7 @@
 title: 'Travel: Conquering The Fear of the Unknown'
 date: 2017-08-10 08:55:00 Z
 categories:
-- travel
+- Travel
 tags:
 - psychology
 - fear
