@@ -19,6 +19,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		padding: 0 2%;
+		justify-content: center;
 		> .card {
 			box-sizing: border-box;
 			width: 100%;
