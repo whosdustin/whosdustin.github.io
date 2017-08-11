@@ -5,10 +5,11 @@
 	margin-bottom: 1em;
 	font-style: italic;
   color: #999;
-	font-size: 0.9em;
+	font-size: ms(-1);
 	@media (min-width: 400px) {
 		flex-flow: row;
 		align-items: flex-start;
 		justify-content: space-between;
+    font-size: ms(0);
 	}
 }

@@ -14,15 +14,24 @@
   }
 
   > .content {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
     box-sizing: border-box;
-    padding: 2em;
+    padding: 1em;
     border: solid 10px $font-color-base;
     width: 100%;
-
     > .title {
-      margin-bottom: 0;
+      margin: 0;
+      font-size: ms(0);
     }
-
+    @media (min-width: 640px) {
+      padding: 2em;
+      > .title {
+        margin: 0;
+        font-size: ms(1);
+      }
+    }
   }
 
 }

@@ -9,11 +9,15 @@ h6 {
 
 h1 { font-size: ms(4);}
 
+h2 { font-size: ms(0);
+@media (min-width: 640px) { font-size: ms(1) }
+}
+
 blockquote {
   position: relative;
   margin: 0;
   padding: 0.5em 1em;
-  font-size: ms(1);
+  font-size: ms(0);
   color: #747474;
   font-style: italic;
   &::before {
@@ -35,5 +39,9 @@ blockquote {
     display: block;
     font-size: 0.7em;
     text-align: right;
+  }
+
+  @media (min-width: 640px) {
+    font-size: ms(1);
   }
 }
