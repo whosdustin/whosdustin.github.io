@@ -34,6 +34,7 @@ layout: null
                 <meta charset="utf-8">
                 <link rel="canonical" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
                 <meta property="op:markup_version" content="v1.0">
+                <meta property="fb:pages" content="512515099098427" />
               </head>
               <body>
                 <article>
@@ -56,7 +57,7 @@ layout: null
                   {% if post.instantfeedback %}
                     {{ post.content | replace: '<figure>', '<figure data-feedback="fb:likes">' | replace: '<figure class="highlight">', '<figure class="highlight op-interactive">' }}
                   {% else %}
-                    {{ post.content | replace: '<figure class="highlight">', '<figure class="highlight op-interactive">' }}
+                    {{ post.content | replace: '<figure class="highlight">', '<figure class="highlight op-interactive">' | replace: '<pre>', '<iframe>' | replace: '</pre>', '</iframe>'  }}
                   {% endif %}
                     <footer>
                         <aside>
