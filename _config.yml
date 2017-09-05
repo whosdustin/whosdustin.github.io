@@ -52,11 +52,13 @@ description: 'Dustin is a ui developer, part-time starving artist, amateur trave
   he appreciates the beauty and prosperity design provides the world.
 
 '
-baseurl: 
+baseurl:
 url: https://whosdustin.com
 twitter_username: whos_dustin
 github_username: whosdustin
 dribbble_username: whosdustin
+owner:
+  name: 'Dustin Delatore'
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from
