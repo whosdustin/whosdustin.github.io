@@ -60,11 +60,8 @@ layout:
                       replace: '<figure class="highlight">', '<figure class="op-interactive">' | replace: '<pre>', '<iframe>' | replace: '</pre>', '</iframe>' | replace: '<code', '<p style="overflow:auto;background-color:#fafafa;border:1px solid #ebebeb;padding:10px;color:#020202;font-size:10px;"' | replace: '</code>', '</p>' }}
                     <footer>
                         <aside>
-                            {% if post.credit %}
-                              {{ post.credit }}.<br />
-                            {% endif %}
-                            Written by {{post.author}}. {{ site.description }}</aside>
-                        <small>Copyright - {{site.title}}</small>
+                          Written by {{post.author}}. {{ site.description }}</aside>
+                        <small>Copyright &copy; {{ 'now' | date: '%Y' }} - {{site.title}}</small>
                   </footer>
                 </article>
               </body>
