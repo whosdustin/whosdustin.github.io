@@ -56,7 +56,7 @@ layout:
                       <time class="op-published" dateTime="{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
                       <time class="op-modified" dateTime="{{ post.modified | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.modified }}</time>
                   </header>
-                    {{ post.content | replace: '<pre>', '<figcaption class="op-medium">' | replace: '</pre>', '</figcaption>' }}
+                    {{ post.content | replace: '<code>', '<figcaption class="op-medium"><h1>Code snippet</h1>' | replace: '</code>', '</figcaption>' | replace: '<pre>', '' | replace: '</pre>', '' }}
                     <footer>
                         <aside>
                             {% if post.credit %}
