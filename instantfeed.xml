@@ -41,6 +41,9 @@ layout:
               <body>
                 <article>
                   <header>
+                    <figure class="op-ad">
+                      <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=528480070816667_528480087483332&adtype=banner300x250"></iframe>
+                    </figure>
                       <h1>{{ post.title | xml_escape }}</h1>
                       {% if post.image %}
                       <figure>
