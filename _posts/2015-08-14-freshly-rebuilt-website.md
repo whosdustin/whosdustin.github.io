@@ -21,13 +21,13 @@ My site is built in [Jekyll](http://jekyllrb.com) with the help of an amazing [Y
 
 As far as the frontend, my site is comprised of Sass for layout and styling. Also, combination of javascript and jQuery for small tracking items. I will soon be making the move to coffeescript for any DOM manipulations.
 
-### Sass styling
+## Sass styling
 
 Over the past year I have been developing [style guidelines](https://github.com/Bisk/Front-end-Standards/wiki/Table-of-Contents) for [Bisk Education](http://bisk.com) and decided to implement them on this new site as well.
 
 The grid system is built with the help of the semantic grid framework [Susy](http://susydocs.oddbird.net/en/latest/). No more ‘bloated’ css libraries full of every possible grid combination. I am allowed to capture the bare minimum for what I need; keeping my code small, clean, and concise.
 
-### Scripting
+## Scripting
 
 All of my javascript is basically for tracking and SEO purposes. I use [GoSquared](http://gosquared.com) for all my site tracking. Google Analytics is an amazing and free tool but I chose to venture away from the norm. I added a simple jQuery plugin that added `data-event`s to all my article links explaining in plain english where my visitors have gone.
 
