@@ -25,11 +25,16 @@ if (!("ontouchstart" in document.documentElement)) {
   function loadNomad(json) {
     loadJSON(json, function(response) {
       var data = JSON.parse(response);
-      var city = data.location.now.city,
-        country = data.location.now.country,
-        anchor = document.getElementById("current_location");
+      var city = data.location.people.city,
+          country = data.location.people.country,
+          locate = document.getElementById("current_location"),
+          anchor = document.createElement("a");
 
-      anchor.innerHTML = city + ", " + country;
+      anchor.href = '#where-in-the-world';
+      anchor.innerHTML = city + ', ' + country;
+
+      locate.innerHTML = '';
+      locate.appendChild(anchor);
     });
   }
 

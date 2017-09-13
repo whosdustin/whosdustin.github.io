@@ -12,8 +12,12 @@ layout: default
 		{% if page.title == 'About' %}
 			<div class="meta">
 				<div>
-					<span><b>Current Status:</b> {{ page.status }}</span>
-					•<span><b>Living in:</b> <a id="current_location" href="#where-in-the-world">Earth</a></span>
+					<span><b>Current Status:</b> {{ page.status }}</span> •
+					<span><b>Living in:</b>
+						<span id="current_location">
+  						<div style="width:100%;height:100%" class="lds-ripple"><div></div><div></div></div>
+						</span>
+					</span>
 				</div>
 			</div>
 			<div class="card__content">
