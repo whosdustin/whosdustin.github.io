@@ -1,6 +1,6 @@
 ---
 layout: none
 permalink: /airbnb/
-title: "Redirecting to Airbnb"
+title: "Airbnb"
 redirect_to: https://www.airbnb.com/c/dustind971
 ---
