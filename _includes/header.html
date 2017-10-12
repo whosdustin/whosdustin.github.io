@@ -6,27 +6,15 @@
 	</a>
 	<nav id="nav_header" class="masthead-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		<a class="nav-item" href="{{ site.baseurl }}/">Home</a>
-		{% for page in site.pages %}
-			{% if page.title %}
-				{% comment %}
-				I should really fix this
-				========================={% endcomment %}
-				{% unless
-					page.title == 'Login'
-					or page.title == 'Resumé'
-					or page.title == 'Remote Work'
-					or page.title == 'About'
-					or page.title == 'Privacy Policy'
-					or page.title == 'Airbnb'
-					or page.title == 'Printful'
-					or page.title == 'Shopify'
-					or page.title == 'Terms and Conditions' %}
-					<a class="nav-item" href="{{ page.url | prepend: site.baseurl }}">
-						{{ page.title }}
-					</a>
-				{% endunless%}
-			{% endif %}
+
+		{% assign pages_path = site.header_pages %}
+		{% for path in pages_path %}
+			{% assign my_page = site.pages | where: "path", path | first %}
+			{% if my_page.title %}
+        <a class="nav-item" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {% endif %}
 		{% endfor %}
+
 		<a class="nav-item" href="{{ site.baseurl }}/resources">Resources</a>
 	</nav>
 	<button class="nav-trigger" data-nav="nav_header">
