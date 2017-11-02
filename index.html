@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section class="billboard">
-	<span class="pretitle">Hello, I am</span>
-	<h1 class="title">Dustin Delatore</h1>
+	<span class="pretitle">Hello, I am Dustin Delatore, your global</span>
+	<h1 class="title">Shopify Theme Developer</h1>
 </section>
 
 <article class="main article">
@@ -28,6 +28,18 @@ layout: default
 
 	<hr>
 
+	<script type="text/javascript" src="https://static.mailerlite.com/data/webforms/625868/w2z9k9.js?v1"></script>
+
+	<hr>
+
+	<h3>Latest Work</h3>
+	{% for work in site.work %}
+		<h4><a href="{{work.link}}" target="_blank" rel="nofollow">{{work.title}}</a></h4>
+		<p>{{work.content}}</p>
+	{% endfor %}
+
+	<hr>
+
 	<h3>Recent Article</h3>
 	{% for post in site.posts limit: 1 %}
 	<a class="card" href="{{ post.url | prepend: site.baseurl }}">
@@ -44,18 +56,16 @@ layout: default
 
 	<hr>
 
-	<h3>Latest Work</h3>
-	{% for work in site.work %}
-		<a href="{{work.link}}" target="_blank" rel="nofollow">{{work.title}}</a>
-		<p>{{work.content}}</p>
-	{% endfor %}
-
-	<hr>
-
 	<h3>Get In Touch</h3>
-	<p>If you want to chat feel free to send me an <a href="mailto:dustin@delatore.me">email</a> or message me on <a href="https://twitter.com/whos_dustin" target="_blank">Twitter</a>. You can also find me on <a href="https://github.com/whosdustin" target="_blank">Github</a>, <a href="https://dribbble.com/whosdustin" target="_blank">Dribbble</a>, <a href="https://instagram.com/whos.dustin" target="_blank">Instagram</a>, and <a href="https://www.linkedin.com/in/whosdustin" target="_blank">Linkedin</a>.</p>
-
-	<p>Recruiters, if you got this far, here is <a href="/cv/">my resumé</a>.</p>
+	<p>Fill out the form below and I'll be in touch.</p>
+	<script type="text/javascript" src="https://static.mailerlite.com/data/webforms/626000/z2v7e5.js?v2"></script>
+	<p>You can find me on
+		<a href="https://twitter.com/whos_dustin" target="_blank">Twitter</a>,
+		<a href="https://github.com/whosdustin" target="_blank">Github</a>,
+		<a href="https://dribbble.com/whosdustin" target="_blank">Dribbble</a>,
+		<a href="https://www.linkedin.com/in/whosdustin" target="_blank">Linkedin</a>, and
+		<a href="https://instagram.com/whos.dustin" target="_blank">Instagram</a>.
+	</p>
 
 	<hr>
 

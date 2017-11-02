@@ -4,4 +4,4 @@ date: 2017-08-10 10:30:00 Z
 link: https://feelgoodbali.com
 ---
 
-An eCommerce site selling pajamas with a purpose. Built on Shopify.
+A women's pajama line helping underprivileged children in Bali get an education. Built on [Shopify](https://whosdustin.com/shopify).

@@ -1,14 +1,11 @@
 ---
 title: About
 permalink: "/about/"
-description: Dustin is a designer, developer, entrepreneur, amateur traveler, and
-  an undeniably talented doodler. Though Dustin stares at lines of code daily, he
-  appreciates the beauty and prosperity design provides the world.
+description: Dustin is a Shopify theme developer and a semi-professional traveler. I help companies all over the globe start their e-commerce site on the famous [Shopify](https://shopify.com) platform. I dedicate my work towards socially conscious brands who provide beauty and prosperity to the world.
 status: World Traveler
-location: Budapest
 layout: page
 ---
 
-I'm a frontend developer, designer, part-time starving artist, amateur traveler, and an undeniably talented doodler. Though I stare at lines of code daily, I appreciate the beauty and prosperity design can provide the world.
+I'm a Shopify theme developer and a semi-professional traveler. I help companies all over the globe start their e-commerce site on the famous [Shopify](https://shopify.com) platform. I dedicate my work towards socially conscious brands who provide beauty and prosperity to the world.
 
-In my spare time I work on some fun and sometimes meaningful projects. Those projects are [4Benefit News](http://4benefitnews.com), [Gnarlacious](http://shop.gnarlacious.com), [Orlando Designers](https://orlandodesigners.info/), [Personal Resources](https://whosdustin.com/resources/), [The Game Namer](http://name.gnarlacious.com), and many more.
+In my spare time I work on some fun and sometimes meaningful projects. Those projects are [4Benefit News](https://4benefitnews.com), [Orlando Designers](https://orlandodesigners.info/), and many more.

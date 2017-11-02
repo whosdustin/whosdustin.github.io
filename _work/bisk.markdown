@@ -4,4 +4,4 @@ date: 2017-08-10 10:50:00 Z
 link: https://bisk.com
 ---
 
-A learning management system for higher education and corporate learning. Built in Jekyll CMS.
+A learning management system for higher education and corporate learning. Built on [Jekyll](https://jekyllrb.com).
