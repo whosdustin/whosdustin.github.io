@@ -17,7 +17,7 @@ layout:
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.excerpt | xml_escape }}</description>
         <content:encoded>{{ post.content | xml_escape }}</content:encoded>
-        <media:content url="{{ post.feature_image }}" medium="image"/>
+        <media:content url="{{ post.feature_image }}" width="600" medium="image"/>
         <author>{{ post.author | xml_escape }}</author>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
