@@ -25,8 +25,8 @@ if (!("ontouchstart" in document.documentElement)) {
   function loadNomad(json) {
     loadJSON(json, function(response) {
       var data = JSON.parse(response);
-      var city = data.location.people.city,
-          country = data.location.people.country,
+      var city = data.location.now.city,
+          country = data.location.now.country,
           locate = document.getElementById("current_location"),
           anchor = document.createElement("a");
 
