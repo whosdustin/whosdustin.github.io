@@ -1,24 +1,17 @@
 <header class="masthead" role="banner">
-	<a class="brand" href="{{ site.baseurl }}/" itemscope itemtype="https://schema.org/Brand">
-		<span itemprop="logo">
-			{% include lgo-whosdustin.svg %}
-		</span>
+	<!-- <a class="sr-only" href="{{ site.baseurl }}/" itemscope itemtype="https://schema.org/Brand">
+		Whosdustin
 	</a>
-	<nav id="nav_header" class="masthead-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
-		<a class="nav-item" href="{{ site.baseurl }}/">Home</a>
-
-		{% assign pages_path = site.header_pages %}
-		{% for path in pages_path %}
-			{% assign my_page = site.pages | where: "path", path | first %}
-			{% if my_page.title %}
-        <a class="nav-item" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-      {% endif %}
-		{% endfor %}
-
-		<a class="nav-item" href="{{ site.baseurl }}/resources">Resources</a>
-	</nav>
 	<button class="nav-trigger" data-nav="nav_header">
 		<span class="burger"></span>
 		Menu
 	</button>
+	<nav id="nav_header" class="masthead-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<a class="nav-item" href="{{ site.baseurl }}/">Home</a>
+		<a class="nav-item" data-scroll="article" href="javascript:;">Articles</a>
+		{% if page.url == '/' %}
+		<a class="nav-item" data-scroll="shopify" href="javascript:;">Shopify</a>
+		<a class="nav-item" data-scroll="youtube" href="javascript:;">YouTube</a>
+		{% endif %}
+	</nav> -->
 </header>

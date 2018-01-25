@@ -1,20 +1,16 @@
 ---
-title: Articles
+title: Articles Archive
 permalink: "/articles/"
 layout: page
 ---
 
 {% for post in site.posts %}
-
-	<a class="card" href="{{ post.url | prepend: site.baseurl }}">
-		<div class="content">
-			<h2 class="title">{{ post.title }}</h2>
-			<span class="meta">
-				<time  datetime="{{post.date | date_to_xmlschema}}">
-					{{ post.date | date: "%b %-d, %Y" }}
-				</time>
-			</span>
-		</div>
+	<a class="vertical-space" href="{{ post.url | prepend: site.baseurl }}">
+		<h4>{{ post.title }}</h4>
+		<span>
+			<time  datetime="{{post.date | date_to_xmlschema}}">
+				{{ post.date | date: "%b %-d, %Y" }}
+			</time>
+		</span>
 	</a>
-
 {% endfor %}

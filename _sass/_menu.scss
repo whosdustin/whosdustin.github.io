@@ -26,10 +26,10 @@
 	position: relative;
 	display: block;
 	text-decoration: none;
-	color: $font-color-base;
+	color: $font-color;
 	&::before {
 		position: absolute;
-		background: $font-color-base;
+		background: $font-color;
 		content: '';
 	}
 	&::before {

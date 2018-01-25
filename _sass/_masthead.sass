@@ -1,0 +1,73 @@
+.masthead-nav
+	position: absolute
+	box-sizing: border-box
+	font-size: 20px
+	background: $white
+	width: 100%
+	top: -1000px
+	padding: 1em 0 1em 3em
+	transition: all 0.4s ease
+	z-index: 1
+	> .nav-item
+		display: block
+		padding: 2%
+		font-family: $font-body
+		color: $font-color
+		font-weight: 400
+		font-size: ms(0)
+		&::after
+			background: none
+	&.-is-open
+		transform: translateY(70px)
+	@media (min-width: 640px)
+		> .nav-item
+			display: inline-block
+			position: relative
+			margin: 0 2%
+			padding: 0
+.nav-trigger
+	position: absolute
+	display: block
+	left: 18px
+	top: 24px
+	padding-top: 18px
+	background: none
+	border: none
+	font-size: 14px
+	text-align: center
+	text-decoration: none
+	color: $font-color
+	font-family: $font-body
+	outline: none
+	z-index: 2
+	> .burger,
+	&::before,
+	&::after
+		border-radius: 1px
+		position: absolute
+		display: block
+		left: 50%
+		height: 3px
+		width: 30px
+		content: ''
+		background: $font-color
+		margin-left: -15px
+		transition: all 0.2s ease
+	// All for the burger menu
+	> .burger
+		top: 8px
+		opacity: 1
+	&::before
+		top: 0
+	&::after
+		top: 16px
+	&.-is-open
+		> .burger
+			opacity: 0
+		&::before,
+		&::after
+			top: 8px
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)

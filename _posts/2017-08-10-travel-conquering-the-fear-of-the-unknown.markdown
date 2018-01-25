@@ -8,13 +8,14 @@ tags:
 - fear
 - travel
 feature_image: https://burst.shopifycdn.com/photos/pouring-hot-coffee_925x@2x.jpg
+medium_url: https://medium.com/@whosdustin/travel-conquering-the-fear-of-the-unknown-b4bfe93cfa1c
 ---
+
+The first thing that comes to mind when I hear fear is a common quote from childhood coaches, "Fear is weakness leaving the body," or those No Fear t-shirts, publicly displaying your level of badassery.
 
 > The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown
 >
 > <cite>– H.P. Lovecraft [^1]</cite>
-
-The first thing that comes to mind when I hear fear is a common quote from childhood coaches, "Fear is weakness leaving the body," or those No Fear t-shirts, publicly displaying your level of badassery.
 
 Ultimately, the medical definition of the term fear is the unpleasant emotional state consisting of psychological and psychophysiological responses to a real external threat or danger.[^2] Fear is the natural human instinct wired in our brains to generally help us survive. Though the progress humans have made, especially in recent years, offers us luxuries in life for which we no longer need to fear.
 

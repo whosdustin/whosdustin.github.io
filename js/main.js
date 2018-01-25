@@ -4,43 +4,82 @@ if (!("ontouchstart" in document.documentElement)) {
 }
 
 (function() {
+  initMario()
+  initModal()
+  initScrollMe()
+  initNomad("https://nomadlist.com/@whos_dustin.json");
 
-  // Mario sequence
-  var listener = new window.keypress.Listener();
-  listener.sequence_combo('m a r i o', function() {
-    var d = document,
-      marioPath = d.createElement('div'),
-      marioImg = d.createElement('img'),
-      marioWait;
-    marioPath.className = 'mario_path';
-    marioImg.className = 'mario';
-    marioImg.src = '/images/img-mario-running.gif';
-    marioPath.appendChild(marioImg);
-    d.body.appendChild(marioPath);
-    marioWait = setTimeout(function() {
-      d.body.removeChild(marioPath);
-    }, 5000);
-  }, true);
+  function initScrollMe() {
+    var arrow = document.createElement('img');
+    arrow.className = 'scrollme';
+    arrow.src = '/images/scroll.gif';
+    document.body.appendChild(arrow);
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        document.body.removeChild(arrow);
+      }
+    })
+  }
 
-  function loadNomad(json) {
+  function initMario() {
+    // Mario sequence
+    var listener = new window.keypress.Listener();
+    listener.sequence_combo('m a r i o', function() {
+      var d = document,
+        marioPath = d.createElement('div'),
+        marioImg = d.createElement('img'),
+        marioWait;
+      marioPath.className = 'mario-path';
+      marioImg.className = 'mario';
+      marioImg.src = '/images/img-mario-running.gif';
+      marioPath.appendChild(marioImg);
+      d.body.appendChild(marioPath);
+      marioWait = setTimeout(function() {
+        d.body.removeChild(marioPath);
+      }, 5000);
+    }, true);
+  }
+
+  function initNomad(json) {
     loadJSON(json, function(response) {
       var data = JSON.parse(response);
       var city = data.location.now.city,
           country = data.location.now.country,
-          locate = document.getElementById("current_location"),
-          anchor = document.createElement("a");
-
-      anchor.href = '#where-in-the-world';
-      anchor.innerHTML = city + ', ' + country;
-
-      locate.innerHTML = '';
-      locate.appendChild(anchor);
+          locate = document.getElementById("current_location");
+      locate.innerHTML = city + ', ' + country;
     });
   }
 
-  loadNomad("https://nomadlist.com/@whos_dustin.json");
+  function initModal() {
 
-  // Private
+    var modalTrigger = document.querySelectorAll('[data-modal]'),
+        overlay = document.createElement('div');
+        overlay.className = 'overlay';
+
+    for (var i = 0; i < modalTrigger.length; i++) {
+      modalTrigger[i].addEventListener('click', function() {
+        var modal = document.getElementById(this.dataset.modal);
+
+        modal.classList.toggle('open')
+        document.body.classList.toggle('stop-scroll')
+        document.body.appendChild(overlay)
+      });
+    }
+
+    overlay.addEventListener('click', function(e) {
+      var modal = document.querySelectorAll('.modal');
+      for(var i=0;i<modal.length;i++) {
+        if (modal[i].classList.contains('open')) {
+          modal[i].classList.remove('open');
+          document.body.classList.remove('stop-scroll')
+          document.body.removeChild(overlay)
+        }
+      }
+
+    });
+
+  }
+
 
   function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();

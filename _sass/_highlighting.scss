@@ -4,16 +4,18 @@ code {
   background-color: $code-bkg;
 	font-size: 0.9em;
 }
+code {
+  white-space: nowrap;
+  padding: 0.2em 0.5em;
+  border-radius: $radius/2 }
+pre {padding: 1em;}
 
-pre {
-	padding: 1em;
-}
 /**
  * Syntax highlighting styles
  */
 
 .highlight {
-	  margin: 0;
+	  margin: $vertical-space 0;
 		border-left: solid 4px #abb2bf;
 
     .hll { background-color: #49483e }
