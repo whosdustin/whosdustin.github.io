@@ -15,10 +15,14 @@ if (!("ontouchstart" in document.documentElement)) {
     arrow.src = '/images/scroll.gif';
     document.body.appendChild(arrow);
     window.addEventListener('scroll', function() {
-      if (window.pageYOffset > 300) {
-        document.body.removeChild(arrow);
+      if (window.pageYOffset === 300) {
+        if (document.body.contains(arrow)) {
+          document.body.removeChild(arrow);
+        }
+        return;
       }
-    })
+    });
+
   }
 
   function initMario() {
