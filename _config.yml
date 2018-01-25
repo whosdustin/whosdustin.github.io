@@ -47,17 +47,19 @@ defaults:
     image: ''
     weight: 0.0
 email: dustin@delatore.me
-description: 'Dustin turns analog ideas into digital masterpieces. Dustin spends his working hours building a rich tapestry of e-commerce Shopify themes. On the side, he travel, illustrates, and YouTubes.
+description: 'Dustin turns analog ideas into digital masterpieces. Dustin spends his
+  working hours building a rich tapestry of e-commerce Shopify themes. On the side,
+  he travel, illustrates, and YouTubes.
 
 '
-baseurl:
+baseurl: 
 url: https://whosdustin.com
 twitter_username: whos_dustin
 github_username: whosdustin
 dribbble_username: whosdustin
 instagram_username: whos.dustin
 youtube_channel: dustindelatore
-medium_username: '@whosdustin'
+medium_username: "@whosdustin"
 owner:
   name: Dustin Delatore
 header_pages:
