@@ -24,6 +24,8 @@ defaults:
     categories: ''
     author: Dustin Delatore
     is_post: true
+    feature_image: ''
+    medium_url: ''
 - scope:
     path: ''
     type: pages
@@ -52,7 +54,7 @@ description: 'Dustin turns analog ideas into digital masterpieces. Dustin spends
   he travel, illustrates, and YouTubes.
 
 '
-baseurl: 
+baseurl:
 url: https://whosdustin.com
 twitter_username: whos_dustin
 github_username: whosdustin
