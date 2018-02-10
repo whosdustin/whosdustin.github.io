@@ -5,12 +5,14 @@ layout: page
 ---
 
 {% for post in site.posts %}
-	<a class="vertical-space" href="{{ post.url | prepend: site.baseurl }}">
-		<h4>{{ post.title }}</h4>
-		<span>
-			<time  datetime="{{post.date | date_to_xmlschema}}">
-				{{ post.date | date: "%b %-d, %Y" }}
-			</time>
-		</span>
-	</a>
+	{% if post.is_post %}
+		<a class="vertical-space" href="{{ post.url | prepend: site.baseurl }}">
+			<h4>{{ post.title }}</h4>
+			<span>
+				<time  datetime="{{post.date | date_to_xmlschema}}">
+					{{ post.date | date: "%b %-d, %Y" }}
+				</time>
+			</span>
+		</a>
+	{% endif %}
 {% endfor %}
