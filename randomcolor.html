@@ -108,13 +108,8 @@ layout:
       var app = new Vue({
         el: '#app',
 
-        ready: function () {
-          this.setHex()
-        },
-
         data: {
-          hex: 'FFFFFF',
-          tinycolor: tinycolor.random()
+          tinycolor: tinycolor('#fff')
         },
 
         computed: {
@@ -130,9 +125,6 @@ layout:
           }
         },
         methods: {
-          setHex: function () {
-            this.$set('hex', this.tinycolor.toHex())
-          },
           randomHex: function () {
             this.tinycolor = tinycolor.random()
           }
