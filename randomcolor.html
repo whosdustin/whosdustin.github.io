@@ -29,7 +29,7 @@ title: Random Color Generator
     return 'https://www.randomlists.com/data/'+param+'.json'
   }
 
-  // var headers = {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"}
+  var _headers = {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"}
 
   var app = new Vue({
     el: '#app',
@@ -62,7 +62,7 @@ title: Random Color Generator
       },
       getWord: function(type) {
         var url = buildUrl(type);
-        axios.get(url).then((response) => {
+        axios.get(url, {headers: _headers}).then((response) => {
           if( type == 'nouns' ) {
             this.nouns = response.data.data;
           } else if ( type == 'adjectives' ) {
