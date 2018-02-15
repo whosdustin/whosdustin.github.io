@@ -1,136 +1,81 @@
 ---
 permalink: "/randomcolor/"
-layout: 
+layout: vue
+title: Random Color Generator
 ---
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Random Color Generator</title>
-    <meta name="description" content="Click the button and randomly generate a hex code.">
-    <meta name="keywords" content="random, color, generator, random color, random color generator, hex code, hex, code">
-    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico">
-    <style media="screen">
-      * {box-sizing: border-box;}
-      body {
-        margin: 0;
-      	padding: 0;
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        font-size: 16px;
-      }
-      #app {
-        display: flex;
-      	align-items: center;
-      	justify-content: center;
-      	width: 100%;
-      	height: 100vh;
-      	border: solid 20px #fff;
-      	text-align: center;
-      }
-      .display {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 3rem;
-      	margin: 0 0 20px;
-        text-transform: uppercase;
-        transition: all 0.5s ease-in;
-      }
-      @media (min-width: 768px) {
-        .display {
-          font-size: 6rem;
-        }
-      }
-      span {
-        color: rgba(0,0,0, 0.3);
-        margin-bottom: 20px
-      }
-      button {
-        width: max-content;
-        background-color: rgba(0,0,0, 0.3);
-        padding: 1rem 2rem;
-      	border: 0;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        border-radius: .25rem;
-      }
-      button:focus {
-        outline: none;
-      }
-      footer {
-      	display: flex;
-      	align-items: center;
-      	justify-content: center;
-        position: absolute;
-        bottom: 0;
-      	width: 100%;
-        color: rgba(0,0,0, 0.3);
-      }
-      footer p {
-        margin: 25px;
-      }
-      footer a {
-        text-decoration: none;
-        color: rgba(0,0,0, 0.3);
-        border-bottom: solid 1px;
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://rawgit.com/bgrins/TinyColor/master/tinycolor.js"></script>
-    {% include analytics.html %}
-  </head>
-  <body>
-
-    <div id="app" :style="{ backgroundColor: hexString }">
-      <div class="display">
-        <span :style="{color: secondaryColor}">{%raw%}{{hexString}}{%endraw%}</span>
-        <button type="button" @click='randomHex' :style="{backgroundColor: secondaryColor, color: hexString}">Generate Color</button>
-      </div>
-      <footer :style="{color: secondaryColor}">
-        <p>Designing with Constraints by <a :style="{color: secondaryColor}" href="http://whosdustin.com">whosdustin</a></p>
-      </footer>
+<div id="app" :style="{ backgroundColor: hexString }">
+  <div class="display">
+    <div class="words" :style="{color: secondaryColor}">
+      <i class="word" :style="{borderColor: secondaryColor}" v-if="!adjective">Adjective</i>
+      <i class="word" v-if="adjective" v-text="adjective"></i>
+      <i class="word" :style="{borderColor: secondaryColor}" v-if="!noun">Noun</i>
+      <i class="word" v-if="noun" v-text="noun"></i>
     </div>
 
-    <script type="text/javascript">
-      Vue.config.debug = true;
-      var app = new Vue({
-        el: '#app',
+    <span :style="{color: secondaryColor}">{%raw%}{{hexString}}{%endraw%}</span>
+    <button type="button" @click="randomize()" :style="{backgroundColor: secondaryColor, color: hexString}">Generate Color</button>
+  </div>
+  <footer :style="{color: secondaryColor}">
+    <p>Designing with Constraints by <a :style="{color: secondaryColor}" href="http://whosdustin.com">whosdustin</a></p>
+  </footer>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+  Vue.config.devtools = true;
+  Vue.config.debug = true;
 
-        data: {
-          tinycolor: tinycolor('#fff')
-        },
+  function buildUrl(param) {
+    return 'https://www.randomlists.com/data/'+param+'.json'
+  }
 
-        computed: {
-          hexString: function () {
-            return this.tinycolor.toHexString()
-          },
-          secondaryColor: function () {
-            if (this.tinycolor.isDark()) {
-              return '#FFFFFF'
-            } else {
-              this.tinycolor.monochromatic()
-            }
-          }
-        },
-        methods: {
-          randomHex: function () {
-            this.tinycolor = tinycolor.random()
-          }
-        }
-      });
+  // var headers = {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"}
 
-    </script>
-  </body>
-</html>
+  var app = new Vue({
+    el: '#app',
+
+    data: {
+      results: '',
+      nouns: [],
+      adjectives: [],
+      tinycolor: tinycolor('#FFFFFF')
+    },
+
+    computed: {
+      hexString: function () {
+        return this.tinycolor.toHexString()
+      },
+      secondaryColor: function () {
+        return tinycolor(this.tinycolor).monochromatic()[2].toHexString()
+      },
+      noun: function () {
+        return this.nouns[Math.floor(Math.random() * this.nouns.length)]
+      },
+      adjective: function () {
+        return this.adjectives[Math.floor(Math.random() * this.adjectives.length)]
+      }
+    },
+
+    methods: {
+      randomHex: function () {
+        this.tinycolor = tinycolor.random()
+      },
+      getWord: function(type) {
+        var url = buildUrl(type);
+        axios.get(url).then((response) => {
+          if( type == 'nouns' ) {
+            this.nouns = response.data.data;
+          } else if ( type == 'adjectives' ) {
+            this.adjectives = response.data.data;
+          } else { return }
+        }).catch( error => { console.log(error); });
+      },
+      randomize: function() {
+        this.randomHex();
+        this.getWord('nouns')
+        this.getWord('adjectives')
+      }
+    }
+  });
+
+</script>
