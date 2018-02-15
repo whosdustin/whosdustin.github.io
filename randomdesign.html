@@ -1,0 +1,88 @@
+---
+title: Random Design Idea Generator
+permalink: "/randomdesign/"
+layout: vue
+---
+
+<div id="app" :style="{ backgroundColor: hexString }">
+  <div class="display">
+    <div class="words" :style="{color: secondaryColor}">
+      <i class="word" :style="{borderColor: secondaryColor}" v-if="!adjective">Adjective</i>
+      <i class="word" v-if="adjective" v-text="adjective"></i>
+      <i class="word" :style="{borderColor: secondaryColor}" v-if="!noun">Noun</i>
+      <i class="word" v-if="noun" v-text="noun"></i>
+    </div>
+
+    <span :style="{color: secondaryColor}">{%raw%}{{hexString}}{%endraw%}</span>
+    <button type="button" @click="randomize()" :style="{backgroundColor: secondaryColor, color: hexString}">Generate</button>
+  </div>
+  <footer :style="{color: secondaryColor}">
+    <p>Designing with Constraints by <a :style="{color: secondaryColor}" href="http://whosdustin.com">whosdustin</a></p>
+  </footer>
+</div>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<script type="text/javascript">
+  window.nouns = {{site.data.nouns | jsonify }},
+  window.adjectives = {{site.data.adjectives | jsonify }}
+</script>
+<script type="text/javascript">
+  Vue.config.devtools = true;
+  Vue.config.debug = true;
+
+  // function buildUrl(param) {
+  //   return 'https://www.randomlists.com/data/'+param+'.json'
+  // }
+
+  // var _headers = {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"}
+
+  var app = new Vue({
+    el: '#app',
+
+    data: {
+      nouns: window.nouns.data,
+      noun: '',
+      adjectives: window.adjectives.data,
+      adjective: '',
+      tinycolor: tinycolor('#FFFFFF')
+    },
+
+    computed: {
+      hexString: function () {
+        return this.tinycolor.toHexString()
+      },
+      secondaryColor: function () {
+        return tinycolor(this.tinycolor).monochromatic()[2].toHexString()
+      }
+    },
+
+    methods: {
+      randomHex: function () {
+        this.tinycolor = tinycolor.random()
+      },
+      randomNoun: function () {
+        this.noun = this.nouns[Math.floor(Math.random() * this.nouns.length)]
+      },
+      randomAdjective: function () {
+        return this.adjective = this.adjectives[Math.floor(Math.random() * this.adjectives.length)]
+      },
+      // getWord: function(type) {
+      //   var url = buildUrl(type);
+      //   axios.get(url, {headers: _headers}).then((response) => {
+      //     if( type == 'nouns' ) {
+      //       this.nouns = response.data.data;
+      //     } else if ( type == 'adjectives' ) {
+      //       this.adjectives = response.data.data;
+      //     } else { return }
+      //   }).catch( error => { console.log(error); });
+      // },
+      randomize: function() {
+        this.randomHex();
+        this.randomNoun();
+        this.randomAdjective();
+        // this.getWord('nouns')
+        // this.getWord('adjectives')
+      }
+    }
+  });
+
+</script>
