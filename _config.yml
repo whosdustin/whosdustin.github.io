@@ -54,7 +54,7 @@ description: 'Dustin turns analog ideas into digital masterpieces. Dustin spends
   he travel, illustrates, and YouTubes.
 
 '
-baseurl: 
+baseurl:
 url: https://whosdustin.com
 twitter_username: whos_dustin
 github_username: whosdustin
@@ -67,7 +67,7 @@ owner:
 header_pages:
 - articles.html
 - talks.html
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-redirect-from
 - jemoji

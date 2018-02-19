@@ -23,3 +23,20 @@ $code-bkg: #282c34
 
 // Media
 $phone: 640px
+
+
+=mobile-only
+  @media screen and (max-width: 39.9375em)
+    @content
+
+=tablet-up
+  @media screen and (min-width: 40em)
+    @content
+
+=laptop-up
+  @media screen and (min-width: 64em)
+    @content
+
+=desktop-up
+  @media screen and (min-width: 82em)
+    @content
