@@ -1,0 +1,32 @@
+.menu
+	padding: 0 4%
+	+tablet-up
+		padding: 0 2em
+.menu__item
+	margin-bottom: 2em
+	padding: 0.3em 1em
+.menu__item .menu__title
+	margin: 0
+	line-height: 1.4
+.menu__item .menu__meta
+	font-weight: 200
+	font-size: 0.75em
+	line-height: 1
+	color: #999
+.menu__item.menu__link
+	position: relative
+	display: block
+	text-decoration: none
+	color: $font-color
+	&::before
+		position: absolute
+		background: $font-color
+		content: ''
+	&::before
+		top: 0
+		bottom: 0
+		left: 0
+		width: 4px
+		height: auto
+	&::after
+		border: 0
