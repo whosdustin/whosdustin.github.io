@@ -1,17 +1,17 @@
 <header class="masthead" role="banner">
-	<a class="masthead__brand" href="{{ site.baseurl }}/" itemscope itemtype="https://schema.org/Brand">
-		<span itemprop="logo">
-			{% include lgo-whosdustin.svg %}
-		</span>
+	<!-- <a class="sr-only" href="{{ site.baseurl }}/" itemscope itemtype="https://schema.org/Brand">
+		Whosdustin
 	</a>
-	<nav class="masthead__nav">
-		<a class="masthead__navitem" href="{{ site.baseurl }}/">Home</a>
-		{% for page in site.pages %}
-			{% if page.title %}
-				<a class="masthead__navitem" href="{{ page.url | prepend: site.baseurl }}">
-					{{ page.title }}
-				</a>
-			{% endif %}
-		{% endfor %}
-	</nav>
+	<button class="nav-trigger" data-nav="nav_header">
+		<span class="burger"></span>
+		Menu
+	</button>
+	<nav id="nav_header" class="masthead-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<a class="nav-item" href="{{ site.baseurl }}/">Home</a>
+		<a class="nav-item" data-scroll="article" href="javascript:;">Articles</a>
+		{% if page.url == '/' %}
+		<a class="nav-item" data-scroll="shopify" href="javascript:;">Shopify</a>
+		<a class="nav-item" data-scroll="youtube" href="javascript:;">YouTube</a>
+		{% endif %}
+	</nav> -->
 </header>

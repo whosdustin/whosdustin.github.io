@@ -1,14 +1,14 @@
 ---
-layout: page
 title: Talks
-permalink: /talks/
+permalink: "/talks/"
+layout: page
 ---
 
-<section class="menu">
-	{% for talk in site.talks %}
-		<a class="menu__item menu__link" href="{{ talk.url | prepend: site.baseurl }}">
-			<h4 class="menu__title">{{ talk.title }}</h4>
-			<time class="menu__meta" datetime="{{talk.date}}">{{ talk.date | date: "%b %-d, %Y" }}</time>
+{% for talk in site.talks %}
+		<a class="card" href="{{ talk.url | prepend: site.baseurl }}">
+			<div class="content">
+				<h2 class="title">{{ talk.title }}</h2>
+				<time class="meta" datetime="{{ talk.date | html_to_xmlschema }}">{{ talk.date | date: "%b %-d, %Y" }}</time>
+			</div>
 		</a>
-	{% endfor %}
-</section>
+{% endfor %}

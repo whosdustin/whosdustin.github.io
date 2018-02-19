@@ -2,32 +2,117 @@
 layout: default
 ---
 
-{% for post in site.posts limit: 1 %}
-	{% assign cat = post.categories | join: '' | downcase %}
-	<div class="main__item card card__feature card__{{ cat }}">
-		<span class="card__subtitle">Latest Article</span>
-		<h2 class="card__title">{{ post.title }}</h2>
-		<span class="card__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-		<div class="card__content">
-			{{ post.content | truncatehtml | truncatewords: 60 }}
-		</div>
-		<a class="button" href="{{ post.url | prepend: site.baseurl }}">Continue reading...</a>
+<section class="billboard section">
+	<div class="body">
+		<h1 class="title">
+			<span>Digital</span>
+			<span>Creator</span>
+			<span>&amp; Nomad</span></h1>
+		<p>I turn analog ideas into digital masterpieces. I spend my working hours building a rich tapestry of e-commerce Shopify themes. On the side, I travel, illustrate, and YouTube. You will find me in <b id="current_location">&lt;locating...&gt;</b> telling my story through the lens.</p>
 	</div>
-{% endfor %}
+	<div class="media">
+		<img src="{{ "/images/pose@2x.png" | prepend: site.baseurl }}" alt="">
+	</div>
+</section>
 
-<aside class="main__aside menu">
-	<h3>Other Articles</h3>
-	{% for post in site.posts offset: 1  limit: 10 %}
-		{% assign cat = post.categories | join: ' ' %}
-			<a class="menu__item menu__link" href="{{ post.url | prepend: site.baseurl }}">
-				<h4 class="menu__title">{{ post.title }}</h4>
-				<span class="menu__meta">
-					<time  datetime="{{post.date}}">
-						{{ post.date | date: "%b %-d, %Y" }}
-					</time>
-					• <span>{{cat}}</span>
-				</span>
+<section class="split section">
+	<div class="half text-center">
+		<img src="{{ "/images/shopify.png" | prepend: site.baseurl }}" style="max-width:330px" alt="">
+		<h2>I’m a Shopify<br> Designer First</h2>
+		<p class="readable">I’ve been designing and developing websites for over 10+ years. Through trials and tribulations, I’ve found passion in e-commerce using the Shopify platform.</p>
+		<a class="scroll button -small" href="#shopify">My Services</a>
+	</div>
+	<div class="half text-center">
+		<img src="{{ "/images/youtube.png" | prepend: site.baseurl }}" style="max-width:330px" alt="">
+		<h2>I’m a Content<br> Creator Second</h2>
+		<p class="readable">I’ve learned a lot while traveling. Therefore, I set out, to create everything digital and share it with the world on one of the most popular digital platforms out there. YouTube.</p>
+		<a class="scroll button -small" href="#youtube">My Story</a>
+	</div>
+</section>
 
-			</a>
+<img id="shopify" src="{{ "/images/separator-green.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+
+<section  class="full section text-center">
+	<h3>For Shopify</h3>
+	<h1 class="title">I bring stores from<br> start to Success</h1>
+	<p class="readable">Are you just getting start? Are your conversions stagnant and need a boost over the plateau? I provide any level of support that is needed to succeed in e-commerce.</p>
+</section>
+
+<section class="split section">
+	<div class="third text-center">
+		<img src="{{ "/images/store@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<h3>Onboard<br> New Stores</h3>
+		<p>I create new Shopify stores from idea to live and upload the first five products for free.</p>
+	</div>
+	<div class="third text-center">
+		<img src="{{ "/images/theme@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<h3>Design<br> custom themes</h3>
+		<p>If you want to stand out in a crowd, I design and build unique themes that tell YOUR story.</p>
+	</div>
+	<div class="third text-center">
+		<img src="{{ "/images/brain@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<h3>Consult on<br> E-commerce UX</h3>
+		<p>I help companies make the best first impression, on a platform where you only get seconds.</p>
+	</div>
+</section>
+
+<section class="full text-center" style="margin-bottom: 0">
+	<h3>For Example</h3>
+</section>
+
+<section class="section split" style="margin-top: 0">
+	{% for work in site.work limit: 2 %}
+	<div class="half text-center">
+		<img src="{{ work.image | prepend: site.baseurl }}"  alt="">
+		<h4><a href="{{work.link}}" target="_blank" rel="nofollow">{{work.title}}</a></h4>
+		<p>{{work.content}}</p>
+		<a class="button -small" href="{{ work.link }}" target="_blank" rel="nofollow">Visit site</a>
+	</div>
 	{% endfor %}
-</aside>
+</section>
+
+<section class="full section text-center">
+	<h2 class="title">Let's work together</h2>
+	<div>
+		<button data-modal="contact-modal" class="button">Schedule a Meeting</button>
+	</div>
+</section>
+
+<div id="contact-modal" class="modal">
+	{% include mailchimp-meeting.html %}
+</div>
+
+<img id="youtube" src="{{ "/images/separator-red.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+
+<section  class="full section text-center">
+	<h3>For YouTube</h3>
+	<h1 class="title">I capture my travels<br> &amp; teach my craft</h1>
+	<p style="max-width: 600px">In 2017, I traveled around the world for an entire year. I reflected on life and seeked out my true passion. I love creating “things” and building something from nothing. I couldn’t neglect the skills I have spent so long perfecting. Join me along my journey. Create with me, learn with me, but most importantly enjoy life with me.</p>
+</section>
+
+<section class="split section">
+	<div class="half">
+			<div class="embed">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/7YwWe1MVK6Q" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+</section>
+
+<section class="full section text-center">
+	<h2>Check out My Channel</h2>
+	<div>
+		<a href="https://youtube.com/{{ site.youtube_channel }}" class="button">See more videos</a>
+	</div>
+</section>
+
+<img src="{{ "/images/separator-black.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+
+<section id="article" class="full section text-center">
+	<h3>Recent Post</h3>
+	{% for post in site.posts limit: 1 %}
+		<h1 class="title">{{ post.title }}</h1>
+		<div>
+			<a href="{{ post.medium_url }}" class="button">Read on Medium</a>
+		</div>
+	{% endfor %}
+</section>

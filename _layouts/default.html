@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html>
+<!--
+|############################|
+|👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾|
+|👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾|
+|👾 👾 👾👾👾👾💢👾👾👾 👾 👾👾👾 |
+|            /               |
+|           /   pew pew      |
+|         🚀                 |
+|############################|
+-->
+<html amp class="no-js" lang="en">
+
 	{% include head.html %}
-	<body class="{% body_class %}">
+
+	<body itemscope itemtype="http://schema.org/WebPage">
+
 		{% include header.html %}
 
-		<main role="main" class="main__container">
+		<main role="main" class="main container">
 			{{ content }}
 		</main>
 
 		{% include footer.html %}
 
-		<script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
+		<script type="text/javascript" src="{{ "/js/keypress-2.1.4.min.js" | prepend: site.baseurl}}"></script>
+		<script type="text/javascript" src="{{site.baseurl}}/js/main.js?{{site.time | date: '%s%N'}}"></script>
+		{% if page.is_post %}
+		<script>
+		var disqus_config = function () {
+			this.page.url = "{{site.url}}{{page.url}}";
+			this.page.identifier = "{{page.title}}";
+		};
+
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//whos-dustin.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+		</script>
+		{% endif %}
   </body>
 </html>

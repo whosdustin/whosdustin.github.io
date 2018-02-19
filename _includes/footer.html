@@ -1,25 +1,48 @@
-<footer class="main__container footer" role="contentinfo">
-	<nav>
-		{% if site.github_username %}
-			<a class="footer__navitem" href="https://github.com/{{ site.github_username }}" >
-				Github
+<footer class="footer split" role="contentinfo">
+	<div class="half">
+		<h4>Contact Me</h4>
+		{% include mailchimp-contact.html %}
+
+		<h4>The "Find Me Here" Links</h4>
+		<nav class="footer-nav">
+			<a class="nav-item" href="https://youtube.com/{{ site.youtube_channel}}" title="YouTube">
+				<img src="{{ "/images/social-icon-youtube@2x.jpg" }}" style="max-width: 45px" alt="Youtube icon">
+				<span class="sr-only">YouTube</span>
 			</a>
-			•
-		{% endif %}
-		{% if site.twitter_username %}
-			<a class="footer__navitem" href="https://twitter.com/{{ site.twitter_username }}">
-				Twitter
+			<a class="nav-item" href="https://instagram.com/{{ site.instagram_username}}" title="Instagram">
+				<img src="{{ "/images/social-icon-instagram@2x.jpg" }}" style="max-width: 45px" alt="Instagram icon">
+				<span class="sr-only">Instagram</span>
 			</a>
-			•
-		{% endif %}
-		{% if site.dribbble_username %}
-			<a class="footer__navitem" href="http://dribbble.com/{{ site.dribbble_username }}" >
-				Dribbble
+			<a class="nav-item" href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
+				<img src="{{ "/images/social-icon-twitter@2x.jpg" }}" style="max-width: 45px" alt="Twitter icon">
+				<span class="sr-only">Twitter</span>
 			</a>
-			•
-		{% endif %}
-		<a class="footer__navitem" href="{{ "/feed.xml" | prepend: site.baseurl }}" >
-			RSS
-		</a>
-	</nav>
+			<a class="nav-item" href="https://github.com/{{ site.github_username }}" title="Github">
+				<img src="{{ "/images/social-icon-github@2x.jpg" }}" style="max-width: 45px" alt="Github icon">
+				<span class="sr-only">Github</span>
+			</a>
+			<a class="nav-item" href="http://dribbble.com/{{ site.dribbble_username }}" title="Dribbble">
+				<img src="{{ "/images/social-icon-dribbble@2x.jpg" }}" style="max-width: 45px" alt="Dribbble icon">
+				<span class="sr-only">Dribbble</span>
+			</a>
+			<a class="nav-item" href="https://medium.com/{{ site.medium_username }}" title="Medium">
+				<img src="{{ "/images/social-icon-medium@2x.jpg" }}" style="max-width: 45px" alt="Medium icon">
+				<span class="sr-only">Medium</span>
+			</a>
+		</nav>
+		<p class="mario-note">P.S. Trying typing "<b>m a r i o</b>" for fun :)!</p>
+	</div>
+	<div class="half">
+		<h4>Where In The World</h4>
+		<div class="embed">
+			<iframe width="560" height="315" src="https://nomadlist.com/whos_dustin/embed?date_start=2016-01-16&date_end=2017-05-10" scrolling="no" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<h4>The Legal Stuff To Seem Legit</h4>
+		<p>Copyright &copy; {{ 'now' | date: '%Y' }} Dustin Delatore All Rights Reserved.</p>
+		<nav class="footer-nav">
+			<a class="nav-item" href="/privacy">Privacy Policy</a>
+			<span class="nav-item">•</span>
+			<a class="nav-item" href="/terms">Terms &amp; Conditions</a>
+		</nav>
+	</div>
 </footer>

@@ -1,29 +1,41 @@
 ---
 layout: default
 ---
+
 {% assign cat = page.categories | join: ' ' %}
-<article class="main__article main__til card card__feature" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="section full article" itemscope itemtype="http://schema.org/Article">
 
-	<header>
-		<h1 class="card__title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="card__meta">
-			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-				{{ page.date | date: "%b %-d, %Y" }}
-			</time>
- 			{% if cat %}
-				• <span>{{cat}}</span>
-			{% endif %}
+	<meta itemprop="headline" content="{{page.title}}">
+	<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+	<meta itemprop="author" content="Dustin Delatore">
+
+	<h1 class="title text-center">{{ page.title }}</h1>
+
+		<section class="meta">
+			<div>
+				<time datetime="{{ page.date | date_to_xmlschema }}">
+					<b>{{ page.date | date: "%b %-d, %Y" }}</b>
+				</time>
+				{% if cat.size > 0 %}
+					•<span>{{cat}}</span>
+				{% endif %}
+				{% capture words %}
+					{{ content | number_of_words | minus: 180 }}
+				{% endcapture %}
+				{% unless words contains '-' %}
+					•{{ words | plus: 180 | divided_by: 180 | append: ' min read' }}
+				{% endunless %}
+			</div>
 			{% if page.author %}
-				<span class="right" itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<img class="sr-only" itemprop="image" src="{{ site.baseurl }}/images/img-dustin-delatore.jpeg" alt="Dustin Delatore's glorious face" />
-					<span itemprop="name">{{ page.author }}</span>
-				</span>
+				<div>
+						<b>By:</b> Dustin Delatore
+				</div>
 			{% endif %}
-		</p>
-	</header>
+		</section>
 
-	<div itemprop="articleBody">
-		{{ content }}
-	</div>
+		<section itemprop="articleBody">
+			{{ content }}
+		</section>
 
+		<div id="disqus_thread"></div>
 </article>

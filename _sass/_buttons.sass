@@ -1,0 +1,23 @@
+$button-height: 70px
+$button-height-small: 50px
+.button
+  display: inline-block
+  height: $button-height-small
+  padding: 0 16%
+  margin: 0.5em 0
+  border: 0
+  background: $white
+  font-weight: 700
+  color: $primary-color
+  line-height: $button-height-small
+  text-decoration: none
+  box-shadow: $shadow
+  border-radius: $radius
+  @media ( min-width: $phone )
+    padding: 0 5%
+    line-height: $button-height
+    height: $button-height
+  &.-small
+    height: $button-height-small
+    padding: 0 8%
+    line-height: $button-height-small

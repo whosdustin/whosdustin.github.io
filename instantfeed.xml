@@ -1,0 +1,78 @@
+---
+layout: 
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/instantfeed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <id>{{ site.url }}</id>
+    <author>
+      <name>{{ site.owner.name }}</name>
+    </author>
+    {% for post in site.posts limit:10 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <author>{{ site.owner.name }}</author>
+        {% if post.summaryfeed and post.excerpt %}
+          <description>{{ post.excerpt | xml_escape }}</description>
+        {% else %}
+          <description>{{ post.content | xml_escape }}</description>
+        {% endif %}
+        <content:encoded>
+            <![CDATA[
+                <!doctype html>
+                <html lang="en" prefix="op: http://media.facebook.com/op#">
+              <head>
+                <meta charset="utf-8">
+                <link rel="canonical" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+                <meta property="op:markup_version" content="v1.0">
+                <meta property="fb:pages" content="512515099098427" />
+                <meta property="fb:use_automatic_ad_placement" content="enable=true ad_density=low">
+              </head>
+              <body>
+                <article>
+                  <header>
+                    <figure class="op-ad">
+                      <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=528480070816667_528480087483332&adtype=banner300x250"></iframe>
+                    </figure>
+                      <h1>{{ post.title | xml_escape }}</h1>
+                      {% if post.image %}
+                      <figure>
+                          <img src="{{ post.image }}" alt=" {{ post.title }} ">
+                          <figcaption>{{ post.title }}</figcaption>
+                      </figure>
+                      {% else %}
+                      <figure>
+                          <img src="{{ site.baseurl | prepend: site.url }}/images/lgo-social-meta.png" alt=" {{ post.title }} ">
+                          <figcaption>{{ post.title }}</figcaption>
+                      </figure>
+                      {% endif %}
+                      <time class="op-published" dateTime="{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
+                      <time class="op-modified" dateTime="{{ post.modified | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.modified }}</time>
+                  </header>
+                    {{ post.content |
+                      replace: '<figure class="highlight">', '<figure class="op-interactive">' | replace: '<pre>', '<iframe>' | replace: '</pre>', '</iframe>' | replace: '<code', '<p style="overflow:auto;background-color:#fafafa;border:1px solid #ebebeb;padding:10px;color:#020202;font-size:12px;"' | replace: '</code>', '</p>' }}
+                    <footer>
+                        <aside>
+                          Written by {{post.author}}. {{ site.description }}</aside>
+                        <small>Copyright &copy; {{ 'now' | date: '%Y' }} - {{site.title}}</small>
+                  </footer>
+                </article>
+              </body>
+            </html>
+        ]]>
+        </content:encoded>
+
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

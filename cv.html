@@ -1,51 +1,54 @@
 ---
+title: Resumé
+permalink: "/cv/"
 layout: page
-title: Resume
-permalink: /cv/
 ---
 
-<a class="button right" href="{{site.baseurl}}/dustin-delatore-resume.pdf">
+<!-- <a class="button right" href="{{site.baseurl}}/dustin-delatore-resume.pdf">
 	Download Pdf Version
-</a>
-
-<h2>Summary</h2>
-<p>
-{% for resume in site.data.resume %}
-{% assign info = resume[1]%}
-	{{ info.summary }}
-{% endfor %}
-</p>
-
-<h2>Skills</h2>
-{% for skills in site.data.resume.skills %}
-	<p><b>{{ skills.name }}:</b> {{ skills.keywords | join: ", "}}</p>
-{% endfor %}
-<hr>
-
-<h2>Experience</h2>
-{% for work in site.data.resume.work %}
-	<h3>{{ work.company }}</h3>
-	<b>{{ work.position }}</b>
-	<span class="right">{{ work.startDate | date: "%h %Y" }} - {% if work.endDate %}{{ work.endDate | date: "%h %Y" }}{% else %}Present{% endif %}</span>
-	<p>{{ work.summary }}</p>
-	<ul>
-		{% for highlights in work.highlights %}
-		 <li>{{ highlights }}</li>
+</a> -->
+<article class="main article">
+	<section>
+		<h3>Summary</h3>
+		<p>
+		{% for resume in site.data.resume %}
+		{% assign info = resume[1]%}
+			{{ info.summary }}
 		{% endfor %}
-	</ul>
-	<hr>
-{% endfor %}
+		</p>
 
-<h2>Volunteering</h2>
-{% for volunteer in site.data.resume.volunteer %}
-	<h3>{{ volunteer.organization }}</h3>
-	<span>{{ volunteer.position }}</span>
-	<p>{{ volunteer.summary }}</p>
-	<hr>
-{% endfor %}
+		<h3>Skills</h3>
+		{% for skills in site.data.resume.skills %}
+			<p><b>{{ skills.name }}:</b> {{ skills.keywords | join: ", "}}</p>
+		{% endfor %}
+		<hr>
 
-<h2>Education</h2>
-{% for edu in site.data.resume.education %}
-	<h3>{{ edu.institution }}</h3>
-	<span>{{ edu.studyType }} - {{ edu.area }}</span>
-{% endfor %}
+		<h3>Experience</h3>
+		{% for work in site.data.resume.work %}
+			<h3>{{ work.company }}</h3>
+			<b>{{ work.position }}</b>
+			<span class="right">{{ work.startDate | date: "%h %Y" }} - {% if work.endDate %}{{ work.endDate | date: "%h %Y" }}{% else %}Present{% endif %}</span>
+			<p>{{ work.summary }}</p>
+			<ul>
+				{% for highlights in work.highlights %}
+				 <li>{{ highlights }}</li>
+				{% endfor %}
+			</ul>
+			<hr>
+		{% endfor %}
+
+		<h3>Volunteering</h3>
+		{% for volunteer in site.data.resume.volunteer %}
+			<h3>{{ volunteer.organization }}</h3>
+			<span>{{ volunteer.position }}</span>
+			<p>{{ volunteer.summary }}</p>
+			<hr>
+		{% endfor %}
+
+		<h3>Education</h3>
+		{% for edu in site.data.resume.education %}
+			<h3>{{ edu.institution }}</h3>
+			<span>{{ edu.studyType }} - {{ edu.area }}</span>
+		{% endfor %}
+	</section>
+</article>

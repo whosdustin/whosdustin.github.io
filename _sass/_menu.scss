@@ -1,5 +1,8 @@
 .menu {
-	padding: 0 2em;
+	padding: 0 4%;
+	@media (min-width: 640px) {
+		padding: 0 2em;
+	}
 }
 
 .menu__item {
@@ -13,10 +16,8 @@
 }
 
 .menu__item .menu__meta {
-	font-family: $font-family-secondary;
 	font-weight: 200;
-	font-style: italic;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	line-height: 1;
 	color: #999;
 }
@@ -25,13 +26,11 @@
 	position: relative;
 	display: block;
 	text-decoration: none;
-	color: $font-color-base;
-	&::before,
-	&::after {
+	color: $font-color;
+	&::before {
 		position: absolute;
-		background: $font-color-base;
+		background: $font-color;
 		content: '';
-		transition: all 0.2s;
 	}
 	&::before {
 		top: 0;
@@ -41,23 +40,6 @@
 		height: auto;
 	}
 	&::after {
-		left: 0;
-		bottom: 0;
-		width: 0;
-		height: 4px;
 		border: 0;
-		z-index: -1;
 	}
-	&:hover {
-		cursor: pointer;
-		&::before {
-			top: 100%;
-		}
-		&::after {
-			width: 100%;
-		}
-	}
-	&:visited {}
-	&:active {}
-	&:focus {}
 }

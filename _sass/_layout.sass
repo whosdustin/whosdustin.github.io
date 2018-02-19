@@ -1,0 +1,45 @@
+.masthead
+	display: flex
+	flex-flow: row
+	align-items: center
+	justify-content: space-between
+.main
+	width: 100%
+	overflow: hidden
+.section
+	margin: $vertical-space 0
+.article
+	> section
+		max-width: 640px
+		margin: 0 auto
+.split
+	display: flex
+	justify-content: space-around
+	flex-flow: column
+	@media ( min-width: $phone )
+		flex-flow: row
+	.half
+		width: 80%
+		align-self: center
+		@media ( min-width: $phone )
+			width: 40%
+	.third
+		width: 80%
+		align-self: center
+		@media ( min-width: $phone )
+			width: 25%
+.full
+	display: flex
+	flex-flow: column
+	width: 80%
+	margin: $vertical-space auto
+	.title
+		max-width: 1000px
+		align-self: center
+	p
+		margin: $vertical-space/2 auto
+#disqus_thread
+	margin: 0 auto
+	width: 80%
+	@media ( min-width: $phone )
+		width: 640px

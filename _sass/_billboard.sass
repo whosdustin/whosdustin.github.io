@@ -1,0 +1,44 @@
+.billboard
+	display: flex
+	justify-content: space-around
+	padding: 0 4%
+	width: 100%
+	flex-flow: column-reverse
+	@media (min-width: $phone)
+		flex-flow: row
+		max-width: 1400px
+	> .body
+		margin: $vertical-space/2 0
+		width: 90%
+		@media (min-width: $phone )
+			width: 50%
+		p
+			width: 100%
+			margin-top: 140px
+			@media ( min-width: $phone )
+				width: 65%
+				margin-top: 0
+	> .media
+		width: 40%
+		align-self: flex-end
+		margin-bottom: -250px
+		@media ( min-width: $phone )
+			width: 30%
+			align-self: flex-start
+			margin-bottom: 0
+	.title
+		> span
+			display: block
+			&:nth-of-type(2)
+				padding-left: 8%
+			&:nth-of-type(3)
+				// text-align: right
+				padding-left: 40%
+				color: $primary-color
+				font-size: ms(0)
+				@media ( min-width: $phone )
+					font-size: ms(3)
+		font-size: ms(2)
+		line-height: 1
+		@media ( min-width: $phone )
+			font-size: ms(5)

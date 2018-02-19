@@ -1,38 +1,76 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: Whos Dustin
-email: dustin@delatore.me
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://whosdustin.com" # the base hostname & protocol for your site
-twitter_username: whos_dustin
-github_username:  whosdustin
-dribbble_username: whosdustin
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "Dustin Delatore"
-
+timezone: UTC
 collections:
-  talks:
+  posts:
+    title: Posts
     output: true
-    permalink: /talks/:path/
+  talks:
+    title: Talks
+    output: true
+    permalink: "/talks/:path/"
+  uploads:
+    title: Uploads
+    output: true
+  work:
+    title: Work
+    output: false
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    categories: ''
+    author: Dustin Delatore
+    is_post: true
+    feature_image: ''
+    medium_url: ''
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+    description: ''
+- scope:
+    path: ''
+    type: work
+  values:
+    link: ''
+- scope:
+    path: ''
+    type: products
+  values:
+    layout: product
+    permalink: "/products/:title/"
+    name: ''
+    price: 0.0
+    sku: ''
+    image: ''
+    weight: 0.0
+email: dustin@delatore.me
+description: 'Dustin turns analog ideas into digital masterpieces. Dustin spends his
+  working hours building a rich tapestry of e-commerce Shopify themes. On the side,
+  he travel, illustrates, and YouTubes.
 
-permalink: /articles/:title/
+'
+baseurl: 
+url: https://whosdustin.com
+twitter_username: whos_dustin
+github_username: whosdustin
+dribbble_username: whosdustin
+instagram_username: whos.dustin
+youtube_channel: dustindelatore
+medium_username: "@whosdustin"
+owner:
+  name: Dustin Delatore
+header_pages:
+- articles.html
+- talks.html
+gems:
+- jekyll-sitemap
+- jekyll-redirect-from
+- jemoji
+permalink: "/articles/:title/"
 highlighter: rouge
-# Build settings
 markdown: kramdown
