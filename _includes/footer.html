@@ -1,7 +1,10 @@
 <footer class="footer split" role="contentinfo">
 	<div class="half">
-		<h4>Contact Me</h4>
-		{% include mailchimp-contact.html %}
+		{% if page.url == '/' %}
+			<h4>Contact Me</h4>
+			{% include mailchimp-contact.html %}
+		{% endif %}
+
 
 		<h4>The "Find Me Here" Links</h4>
 		<nav class="footer-nav">
