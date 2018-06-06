@@ -7,7 +7,7 @@ if (!("ontouchstart" in document.documentElement)) {
   initMario()
   initModal()
   initScrollMe()
-  initNomad("https://nomadlist.com/@whos_dustin.json");
+  initNomad("https://nomadlist.com/@whosdustin.json");
 
   function initScrollMe() {
     var arrow = document.createElement('img');
