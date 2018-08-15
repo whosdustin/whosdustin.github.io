@@ -1,0 +1,13 @@
+.social-icon
+  max-width: 45px
+  transition: all 0.4s
+  &:hover
+    animation: wiggle 0.5s infinite
+
++keyframes(wiggle)
+  0%
+    transform: rotate(8deg) scale(1.04)
+  50%
+    transform: rotate(-8deg) scale(1.04)
+  100%
+    transform: rotate(8deg) scale(1.04)

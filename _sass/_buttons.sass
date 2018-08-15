@@ -1,23 +1,29 @@
 $button-height: 70px
 $button-height-small: 50px
 .button
-  display: inline-block
+  display: inline-flex
+  align-items: center
   height: $button-height-small
   padding: 0 16%
   margin: 0.5em 0
   border: 0
   background: $white
   font-weight: 700
-  color: $primary-color
-  line-height: $button-height-small
+  color: $font-color
   text-decoration: none
+  border: solid 2px $font-color
   box-shadow: $shadow
   border-radius: $radius
+  transition: all 0.4s
+  &:hover
+    color: $primary-color
+    border-color: $primary-color
+    transform: scale(1.05) translateY(-5px)
+    box-shadow: $shadow-hover
+
   @media ( min-width: $phone )
     padding: 0 5%
-    line-height: $button-height
     height: $button-height
   &.-small
     height: $button-height-small
     padding: 0 8%
-    line-height: $button-height-small
