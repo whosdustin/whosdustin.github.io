@@ -1,0 +1,4 @@
+<img id="{{ include.name }}" class="separator" alt="{{ include.name }} color separator"
+      src="{{ "/images/separator-" | prepend: site.baseurl | append: include.color | append: '.jpg' }}"
+      srcset="{{ "/images/separator-" | prepend: site.baseurl | append: include.color | append: '.jpg' }} 500w,
+      {{ "/images/separator-" | prepend: site.baseurl | append: include.color | append: '@2x.jpg' }} 1000w" >

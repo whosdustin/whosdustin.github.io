@@ -11,26 +11,35 @@ layout: default
 		<p>I turn analog ideas into digital masterpieces. I spend my working hours building a rich tapestry of e-commerce Shopify themes. On the side, I travel, illustrate, and YouTube. You will find me in <b id="current_location">&lt;locating...&gt;</b> telling my story through the lens.</p>
 	</div>
 	<div class="media">
-		<img src="{{ "/images/pose@2x.png" | prepend: site.baseurl }}" alt="">
+		<img alt="Dustin Delatore"
+				src="{{ "/images/pose@2x.png" | prepend: site.baseurl }}"
+		 		srcset="{{ "/images/pose@2x.png" | prepend: site.baseurl }} 1000w,
+								{{ "/images/pose.png" | prepend: site.baseurl }} 500w,">
 	</div>
 </section>
 
 <section class="split section">
 	<div class="half text-center">
-		<img src="{{ "/images/shopify.png" | prepend: site.baseurl }}" style="max-width:330px" alt="">
+		<img alt="Shopify Bag" style="max-width:330px"
+					src="{{ "/images/shopify.png" | prepend: site.baseurl }}"
+					srcset="{{ "/images/shopify.png" | prepend: site.baseurl }} 500w,
+									{{ "/images/shopify@2x.png" | prepend: site.baseurl }} 1000w" >
 		<h2>I’m a Shopify<br> Designer First</h2>
 		<p class="readable">I’ve been designing and developing websites for over 10+ years. Through trials and tribulations, I’ve found passion in e-commerce using the Shopify platform.</p>
 		<a class="scroll button -small" href="#shopify">My Services</a>
 	</div>
 	<div class="half text-center">
-		<img src="{{ "/images/youtube.png" | prepend: site.baseurl }}" style="max-width:330px" alt="">
+		<img alt="YouTube Play" style="max-width:330px"
+					src="{{ "/images/youtube.png" | prepend: site.baseurl }}"
+					srcset="{{ "/images/youtube.png" | prepend: site.baseurl }} 500w,
+									{{ "/images/youtube@2x.png" | prepend: site.baseurl }} 1000w" >
 		<h2>I’m a Content<br> Creator Second</h2>
 		<p class="readable">I’ve learned a lot while traveling. Therefore, I set out, to create everything digital and share it with the world on one of the most popular digital platforms out there. YouTube.</p>
 		<a class="scroll button -small" href="#youtube">My Story</a>
 	</div>
 </section>
 
-<img id="shopify" src="{{ "/images/separator-green.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+{%- include section-separator.html name='shopify' color='green' -%}
 
 <section  class="full section text-center">
 	<h3>For Shopify</h3>
@@ -40,17 +49,26 @@ layout: default
 
 <section class="split section">
 	<div class="third text-center">
-		<img src="{{ "/images/store@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<img style="max-width: 230px" alt="Shopify Store"
+					src="{{ "/images/store@2x.jpg" | prepend: site.baseurl }}"
+					srcset="{{ "/images/store.jpg" | prepend: site.baseurl }} 500w,
+									{{ "/images/store@2x.jpg" | prepend: site.baseurl }} 1000w" >
 		<h3>Onboard<br> New Stores</h3>
 		<p>I create new Shopify stores from idea to live and upload the first five products for free.</p>
 	</div>
 	<div class="third text-center">
-		<img src="{{ "/images/theme@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<img style="max-width: 230px" alt="Shopify Theme"
+					src="{{ "/images/theme@2x.jpg" | prepend: site.baseurl }}"
+					srcset="{{ "/images/theme.jpg" | prepend: site.baseurl }} 500w,
+									{{ "/images/theme@2x.jpg" | prepend: site.baseurl }} 1000w" >
 		<h3>Design<br> custom themes</h3>
 		<p>If you want to stand out in a crowd, I design and build unique themes that tell YOUR story.</p>
 	</div>
 	<div class="third text-center">
-		<img src="{{ "/images/brain@2x.jpg" | prepend: site.baseurl }}" style="max-width: 230px" alt="">
+		<img style="max-width: 230px" alt="Shopify User Design"
+					src="{{ "/images/brain@2x.jpg" | prepend: site.baseurl }}"
+					srcset="{{ "/images/brain.jpg" | prepend: site.baseurl }} 500w,
+									{{ "/images/brain@2x.jpg" | prepend: site.baseurl }} 1000w" >
 		<h3>Consult on<br> E-commerce UX</h3>
 		<p>I help companies make the best first impression, on a platform where you only get seconds.</p>
 	</div>
@@ -82,7 +100,7 @@ layout: default
 	{% include mailchimp-meeting.html %}
 </div>
 
-<img id="youtube" src="{{ "/images/separator-red.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+{%- include section-separator.html name='youtube' color='red' -%}
 
 <section  class="full section text-center">
 	<h3>For YouTube</h3>
@@ -105,7 +123,7 @@ layout: default
 	</div>
 </section>
 
-<img src="{{ "/images/separator-black.jpg" | prepend: site.baseurl }}" class="separator" alt="">
+{%- include section-separator.html name='default' color='black' -%}
 
 <section id="article" class="full section text-center">
 	<h3>Recent Post</h3>
