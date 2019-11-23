@@ -9,7 +9,7 @@
     <meta name="keywords" content="random, color, generator, random color, random color generator, hex code, hex, code">
 
     {% include social-meta.html %}
-    
+
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico">
     <style media="screen">
       * {box-sizing: border-box;}
@@ -93,12 +93,14 @@
         border-bottom: solid 1px;
       }
     </style>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <script src="https://rawgit.com/bgrins/TinyColor/master/tinycolor.js"></script>
     {% include analytics.html %}
   </head>
   <body>
+
     {{ content }}
+
   </body>
 </html>
