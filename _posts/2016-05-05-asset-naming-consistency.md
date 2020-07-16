@@ -39,3 +39,4 @@ img-author.jpg
 ## Naming images in design tools
 
 Design platforms have amazing exportable features integrated in them. [Sketch](http://sketchapp.com/) seems to be the best, exporting images using the layer name as the exported title. Photoshop is getting better, although a little more complicated. There is an incredible plugin for Photoshop called [PNGexpress](http://www.pngexpress.com/), which uses the name of the layer/group to export directly from the document to a any folder on the computer.
+ New test text.
